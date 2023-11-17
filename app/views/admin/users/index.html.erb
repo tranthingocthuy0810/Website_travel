@@ -1,0 +1,29 @@
+<div id="content">
+  <div class="container-fluid">
+    <div class="row">
+      <h2>User Details</h2>
+      <table class="table table-striped">
+        <thead>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Phone Number</th>
+          <th>Actions</th>
+        </thead>
+        <tbody>
+        <% @users.each do |user| %>
+          <tr>
+            <td><%= user.name %></td>
+            <td><%= user.email %></td>
+            <td><%= user.phone_number %></td>
+            <td>
+              <%= link_to 'Edit' %>
+              <%= link_to 'Destroy'%>
+            </td>
+           
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,6 @@
+<% if policy(Post).show? %>
+  <%= @post.title %>
+  <%= @post.discription %>
+<% else %>
+  <p>You are not authorized to view this product.</p>
+<% end %>

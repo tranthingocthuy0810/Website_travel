@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TravelProject</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+    <% if user_signed_in? && current_user.admin? %>
+        <%= render "static_pages/header_admin" %>
+        <div class="container">
+          <%= yield %>
+        </div>
+      <% else %>
+        <%= render "static_pages/header_client" %>
+        <div class="container">
+          <%= yield %>
+        </div>
+    <% end %>
+  </body>
+</html>
