@@ -3,4 +3,5 @@ class Post < ApplicationRecord
     validates :title, presence: true
     validates :discription, presence: true
     enum status: {draft: 0, published: 1}
+
 end

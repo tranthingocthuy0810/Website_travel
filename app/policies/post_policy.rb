@@ -4,7 +4,7 @@ class PostPolicy < ApplicationPolicy
     end
 
     def show?
-        user.admin? || record.published?
+        true
     end 
 
     def destroy?
