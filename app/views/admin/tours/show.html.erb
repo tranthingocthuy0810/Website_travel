@@ -1,0 +1,6 @@
+<p id="notice"><%= notice %></p>
+<%= @tour.title %> </br>
+<%= @tour.description %> </br>
+<%= @tour.status.humanize %>
+<%= link_to 'Edit', edit_admin_tour_path(@tour) %>
+<%= link_to 'Back', admin_tours_path %>

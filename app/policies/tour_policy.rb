@@ -1,4 +1,4 @@
-class PostPolicy < ApplicationPolicy
+class TourPolicy < ApplicationPolicy
     def index?
         true
     end

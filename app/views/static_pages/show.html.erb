@@ -1,6 +1,6 @@
-<% if policy(Post).show? %>
-  <%= @post.title %> </br>
-  <%= @post.discription %>
+<% if policy(Tour).show? %>
+  <%= @tour.title %> </br>
+  <%= @tour.description %>
 <% else %>
   <p>You are not authorized to view this product.</p>
 <% end %>
