@@ -33,7 +33,10 @@ gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 gem 'omniauth-rails_csrf_protection'
 gem 'image_processing'
-#gem 'stimulus-rails'
+gem 'stimulus-rails'
+gem 'importmap-rails'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'

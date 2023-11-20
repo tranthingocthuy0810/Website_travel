@@ -1,0 +1,15 @@
+<% if @categories.any? %>
+  <h2>Your Categories </h2>
+  <ul>
+    <% @categories.each do |category| %>
+      <li><%= category.tourname %></li>
+        <ul>
+          <% ListTour.all.each do |list_tour| %>
+            <li><%= list_tour.name %></li>
+          <% end %>
+        </ul>
+    <% end %>
+  </ul>
+<% else %>
+  <p>You haven't created any tours yet.</p>
+<% end %>

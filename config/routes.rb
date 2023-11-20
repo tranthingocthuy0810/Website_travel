@@ -6,6 +6,8 @@ Rails.application.routes.draw do
   namespace :admin do
     resource :users
     resources :tours
+    resources :categories
+    resources :list_tours
     get "tours"
   end
 

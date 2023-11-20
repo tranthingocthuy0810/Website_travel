@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class ToursControllerTest < ActionDispatch::IntegrationTest
+class Admin::ToursControllerTest < ActionDispatch::IntegrationTest
   setup do
     @tour = tours(:one)
   end

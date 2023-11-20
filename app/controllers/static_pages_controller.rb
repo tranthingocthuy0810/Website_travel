@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
     @tours = policy_scope(Tour)
+    @categories = Category.all
   end
 
   def show

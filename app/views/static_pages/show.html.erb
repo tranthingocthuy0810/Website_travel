@@ -1,6 +1,7 @@
 <% if policy(Tour).show? %>
   <%= @tour.title %> </br>
-  <%= @tour.description %>
+  <%= @tour.description %> </br>
+  <%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
 <% else %>
   <p>You are not authorized to view this product.</p>
 <% end %>

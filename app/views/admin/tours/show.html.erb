@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 <%= @tour.title %> </br>
 <%= @tour.description %> </br>
+<td><%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
 <%= @tour.status.humanize %>
 <%= link_to 'Edit', edit_admin_tour_path(@tour) %>
 <%= link_to 'Back', admin_tours_path %>
