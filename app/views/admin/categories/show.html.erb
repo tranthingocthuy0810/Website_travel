@@ -4,7 +4,7 @@
   <strong>Tourname:</strong>
   <%= @category.tourname %>
   <ul>
-    <% ListTour.all.each do |list_tour| %>
+    <% @category.list_tour.all.each do |list_tour| %>
       <li><%= list_tour.name %></li>
     <% end %>
   </ul>

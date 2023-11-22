@@ -3,11 +3,9 @@
   <ul>
     <% @categories.each do |category| %>
       <li><%= category.tourname %></li>
-        <ul>
-          <% ListTour.all.each do |list_tour| %>
-            <li><%= list_tour.name %></li>
-          <% end %>
-        </ul>
+        <% category.list_tour.each do |list_tour| %>
+         <%= list_tour.name %>
+        <% end %>
     <% end %>
   </ul>
 <% else %>

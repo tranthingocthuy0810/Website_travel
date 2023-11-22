@@ -1,5 +1,5 @@
 <%= form_for([:admin, @list_tour]) do |form| %>
-  <% if list_tour.errors.any? %>
+  <% if @list_tour.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(list_tour.errors.count, "error") %> prohibited this list_tour from being saved:</h2>
 
