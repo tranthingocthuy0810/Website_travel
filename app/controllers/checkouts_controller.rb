@@ -4,6 +4,7 @@ class CheckoutsController < ApplicationController
     def create
       tour = Tour.find(params[:id])
       @session = Stripe::Checkout::Session.create({
+        customer: current_user.stripe_customer_id,
         payment_method_types: ['card'],
         line_items: [{
         price_data: {
@@ -24,4 +25,8 @@ class CheckoutsController < ApplicationController
         format.js
       end
     end
+
+    def success
+    end
   end
+  

@@ -18,17 +18,9 @@ class User < ApplicationRecord
     end
   end
 
-  def stripe_attributes(pay_customer)
-    {
-      address: {
-        city: pay_customer.owner.city,
-        country: pay_customer.owner.country
-      },
-      metadata: {
-        pay_customer_id: pay_customer.id,
-        user_id: id
-      }
-    }
+  after_create do 
+    customer = Stripe::Customer.create(email: email)
+    update(stripe_customer_id: customer.id)
   end
 
   def self.create_from_provider_data(provider_data)

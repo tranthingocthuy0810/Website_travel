@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_26_152049) do
+ActiveRecord::Schema.define(version: 2023_11_27_143154) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -66,6 +66,7 @@ ActiveRecord::Schema.define(version: 2023_11_26_152049) do
     t.bigint "list_tour_id", null: false
     t.decimal "price", precision: 10
     t.string "stripe_price_id"
+    t.integer "sales_count", default: 0, null: false
     t.index ["list_tour_id"], name: "index_tours_on_list_tour_id"
   end
 
@@ -83,6 +84,7 @@ ActiveRecord::Schema.define(version: 2023_11_26_152049) do
     t.string "phone_number"
     t.integer "role", default: 0
     t.string "avatar", limit: 500
+    t.string "stripe_customer_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
