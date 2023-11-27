@@ -1,6 +1,8 @@
 <% if policy(Tour).show? %>
   <%= @tour.title %> </br>
   <%= @tour.description %> </br>
+  <span>Gia: </span><%= @tour.price %> </br>
+  <%= button_to "Checkout", checkouts_create_path, params: {id: @tour.id}, remote: true %> </br>
   <%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
 <% else %>
   <p>You are not authorized to view this product.</p>

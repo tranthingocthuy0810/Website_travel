@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get "home", to: "static_pages#home", as: :home_client
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: "users/registrations", :confirmations => "users/confirmations"}
   get '/help', to: 'static_pages#help'
+
   namespace :admin do
     resource :users
     resources :tours
@@ -12,5 +13,6 @@ Rails.application.routes.draw do
   end
 
   resources :static_pages, only: %i(index show)
+  post "checkouts/create", to: "checkouts#create"
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

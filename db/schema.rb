@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2023_11_21_144855) do
+ActiveRecord::Schema.define(version: 2023_11_26_152049) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -65,6 +65,7 @@ ActiveRecord::Schema.define(version: 2023_11_21_144855) do
     t.string "image", limit: 500
     t.bigint "list_tour_id", null: false
     t.decimal "price", precision: 10
+    t.string "stripe_price_id"
     t.index ["list_tour_id"], name: "index_tours_on_list_tour_id"
   end
 
