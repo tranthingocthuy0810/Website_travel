@@ -1,14 +1,14 @@
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231026-43567-1xr9o2v.rb extconf.rb
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-n4bzej.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
 creating Makefile
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
 make "DESTDIR=" clean
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
 make "DESTDIR="
 compiling http11_parser.c
 compiling io_buffer.c
@@ -32,6 +32,6 @@ In file included from /home/thuytran/.rbenv/versions/2.7.4/openssl/include/opens
 compiling puma_http11.c
 linking shared-object puma/puma_http11.so
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20231026-43567-13qzpuh/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20231202-84237-1ht681v/puma

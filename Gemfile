@@ -37,7 +37,8 @@ gem 'stimulus-rails'
 gem 'importmap-rails'
 gem 'bootstrap', '~> 4.0.0'
 gem 'jquery-rails'
-
+gem 'bootstrap-sass'
+gem "font-awesome-sass"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
