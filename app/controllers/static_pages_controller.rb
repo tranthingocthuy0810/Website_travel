@@ -1,10 +1,11 @@
 class StaticPagesController < ApplicationController
   def home
-    @posts = policy_scope(Post)
+    @tours = policy_scope(Tour)
+    @categories = Category.all
   end
 
   def show
-    @post = Post.find(params[:id])
+    @tour = Tour.find(params[:id])
   end
   
   def help

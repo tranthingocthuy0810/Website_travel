@@ -1,5 +1,7 @@
 {
   "name": "travel_project",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "@hotwired/stimulus": "^3.2.2"
+  }
 }

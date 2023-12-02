@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-3.times do |index|
-    Post.create! title: "Draft post #{index +1}", discription:"On the 2nd and 3rd day, we went out to other famous places in Danang such as Ba Na Hills, Marble Mountains, Helio Market",status: "draft"
-    Post.create! title: "Published article #{index +1}",discription:"On the 4nd and 3rd day, we went out to other famous places in Phu Yen such as Mui Dien, Phu Yen Beach", status: "published"
+2.times do |index|
+    Post.create! title: "Draft post", discription:"On the 2nd and 3rd day, we went out to other famous places in Danang such as Ba Na Hills, Marble Mountains, Helio Market",status: "draft"
+    Post.create! title: "Published article",discription:"On the 4nd and 3rd day, we went out to other famous places in Phu Yen such as Mui Dien, Phu Yen Beach", status: "published"
 end

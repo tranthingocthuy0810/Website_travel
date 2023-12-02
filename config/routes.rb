@@ -5,8 +5,10 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   namespace :admin do
     resource :users
-    resources :posts
-    get "posts"
+    resources :tours
+    resources :categories
+    resources :list_tours
+    get "tours"
   end
 
   resources :static_pages, only: %i(index show)
