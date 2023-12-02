@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @list_tour.name %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @list_tour.category_id %>
+</p>
+
+<% @list_tour.tour.all.each do |tour| %>
+  <li><%= tour.title %></li>
+  <td><%= image_tag(tour.image, class: "image") if tour.image.attached?%> </td>
+  <li><%= tour.description %></li>
+<% end %>
+
+<%= link_to 'Edit', edit_admin_list_tour_path(@list_tour) %> |
+<%= link_to 'Back', admin_list_tours_path %>

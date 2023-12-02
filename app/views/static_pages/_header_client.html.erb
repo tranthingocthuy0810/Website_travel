@@ -1,22 +1,55 @@
+<section class="header">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+  <%= image_tag('logo.png', alt: 'My Logo', class: 'logo', style: 'width: auto; height: 60px;') %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavDropdown">
+    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+      <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Tour trong nuoc", edit_user_registration_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Tour nuoc ngoai", edit_user_registration_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Dich vu khac", edit_user_registration_path, class: "nav-link" %></li>
+      <li class="nav-item"><%= link_to "Contact", edit_user_registration_path, class: "nav-link" %></li>
+    </ul>
+    <div class="nav_right mt-2 mr-5">
+      <ul>
+          <li class="nr_li">
+          <i class="fa-solid fa-bell"></i>
+          </li>
+          <% if user_signed_in?  %>
+            <li class="nr_li dd_main">
+            <%= image_tag(current_user.avatar_thumbnail, class: "img") %>
+              
+              <div class="dd_menu">
+                <div class="dd_left">
+                    <ul>
+                      <li><i class="fas fa-map-marker-alt"></i></li>
+                      <li><i class="far fa-star"></i></li>
+                      <li><i class="far fa-plus-square"></i></li>
+                    </ul>
+                </div>
+                <div class="dd_right">
+                  <ul>
+                    <li><%= current_user.name %></li>
+                    <li><%= link_to "Settings", edit_user_registration_path %></li>
+                    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <% else %>
+              <button class="btn-login"><%= link_to "Log in", new_user_session_path %></li></button>
+            <% end %>
+        </ul>
+      </div>
+  </div>
+  </nav>
+<script>
+	var dd_main = document.querySelector(".dd_main");
 
-<ul>
-          <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Help", help_path %></li>
-          <li><%= link_to "About" %></li>
-          <% if user_signed_in?  %> 
-              <li class="dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><%= current_user.name %>
-                </a>
-                <%= image_tag(current_user.avatar_thumbnail) %>
-                <ul class="dropdown-menu">
-                  <li><%= link_to "Settings", edit_user_registration_path %></li>
-                  <li class="divider"></li>
-                  <li>
-                  <%= link_to "Log out", destroy_user_session_path, method: :delete %>
-                  </li>
-                </ul>
-              </li>
-          <% else %>
-          <li><%= link_to "Log in", new_user_session_path %></li>
-          <% end %>
- </ul>
+	dd_main.addEventListener("click", function(){
+		this.classList.toggle("active");
+	})
+</script>
+</section>

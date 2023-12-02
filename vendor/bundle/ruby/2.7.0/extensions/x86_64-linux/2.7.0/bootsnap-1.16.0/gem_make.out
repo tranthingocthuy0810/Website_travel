@@ -1,15 +1,15 @@
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231026-43567-1h5pgi2.rb extconf.rb
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-1kg0quw.rb extconf.rb
 creating Makefile
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
 make "DESTDIR=" clean
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
 make "DESTDIR="
 compiling bootsnap.c
 linking shared-object bootsnap/bootsnap.so
 
-current directory: /home/thuytran/travel_project/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
+current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bootsnap-1.16.0/ext/bootsnap
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20231026-43567-1x9s1kk/bootsnap
+/usr/bin/install -c -m 0755 bootsnap.so ./.gem.20231202-84237-wyrew7/bootsnap

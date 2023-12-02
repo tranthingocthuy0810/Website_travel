@@ -1,12 +1,17 @@
+<section>
+</section>
 <h1>Home client</h1>
-<% if @posts.any? %>
-  <h2>Your Posts:</h2>
+<%= render "category" %>
+<h1>Home client</h1>
+<% if @tours.any? %>
+  <h2>Your Tours:</h2>
   <ul>
-    <% @posts.each do |post| %>
-      <li><%= post.title %></li>
-      <td><%= link_to 'Detail', static_page_path(post.id) %></td>
+    <% @tours.each do |tour| %>
+      <li><%= tour.title %></li>
+      <td><%= image_tag(tour.image, class: "image") if tour.image.attached?%> </td>
+      <td><%= link_to 'Detail', static_page_path(tour.id) %></td>
     <% end %>
   </ul>
 <% else %>
-  <p>You haven't created any posts yet.</p>
+  <p>You haven't created any tours yet.</p>
 <% end %>

@@ -1,0 +1,13 @@
+<div data-controller="previews">
+  <%= form.label :image, style: "display: block" %>
+  <%= form.file_field :image,
+    direct_upload: true,
+    data: { previews_target: "input", action: "change->previews#preview" } %>
+  <div class="image-container">
+    <% if tour.image.attached? %>
+      <%= image_tag tour.image, data: { previews_target: "preview" }, style: "width: 200px; height: auto;" %>
+    <% else %>
+      <%= image_tag "", data: { previews_target: "preview" }, style: "width: 200px; height: auto;" %>
+    <% end %>
+  </div>
+</div>

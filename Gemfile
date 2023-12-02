@@ -4,7 +4,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.4'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.2.8'
+gem 'rails', '~> 6.0.6'
 # Use mysql as the database for Active Record
 gem 'mysql2', '>= 0.4.4', '< 0.6.0'
 # Use Puma as the app server
@@ -33,7 +33,12 @@ gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 gem 'omniauth-rails_csrf_protection'
 gem 'image_processing'
-
+gem 'stimulus-rails'
+gem 'importmap-rails'
+gem 'bootstrap', '~> 4.0.0'
+gem 'jquery-rails'
+gem 'bootstrap-sass'
+gem "font-awesome-sass"
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -69,3 +74,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem "pundit", "~> 2.3"
+
+gem "stripe", "~> 9.1"
+
+gem "webpacker", "~> 5.4"

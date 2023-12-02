@@ -1,0 +1,18 @@
+<%= form_for([:admin, @tour]) do |form| %>
+  <div class="field">
+    <%= form.label :title %><br>
+    <%= form.text_field :title %>
+  </div>
+  <div class="field">
+    <%= form.label :description %><br>
+    <%= form.text_area :description %>
+  </div>
+  <%= render "image_preview", form: form, tour: @tour %>
+  <div class="field">
+    <%= form.label :status %>
+    <%= form.select :status, options_for_select(Tour.statuses.map { |key, value| [key.humanize, key] }), {prompt: "Select status of Tour..."}, class: "form-control" %>
+  </div>
+  <div class="actions">
+    <%= form.submit "#{action} Tour" %>
+  </div>
+<% end %>
