@@ -5,21 +5,26 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <script src="https://js.stripe.com/v3/"></script>
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'bootstrap.min.js' %>
+    <%= javascript_include_tag 'jquery.min.js' %>
+    <%= javascript_include_tag 'popper.min.js' %>
+    <%= javascript_include_tag 'owl.carousel.min.js' %>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css">
   </head>
 
   <body>
-    <% if user_signed_in? && current_user.admin? %>
+    <% unless current_page?(new_user_session_path) || current_page?(user_session_path) %>
+      <% if user_signed_in? && current_user.admin? %>
         <%= render "static_pages/header_admin" %>
-        <div class="container">
-          <%= yield %>
-        </div>
       <% else %>
         <%= render "static_pages/header_client" %>
-        <div class="container">
-          <%= yield %>
-        </div>
+      <% end %>
     <% end %>
+
+    <div>
+      <%= yield %>
+    </div>
   </body>
 </html>

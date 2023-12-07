@@ -7,7 +7,15 @@
     <%= form.label :description %><br>
     <%= form.text_area :description %>
   </div>
+  <div class="field">
+    <%= form.label :price %><br>
+    <%= form.text_area :price %>
+  </div>
   <%= render "image_preview", form: form, tour: @tour %>
+  <div class="field">
+    <%= form.label :list_tour_id %>
+    <%= form.select :list_tour_id, options_for_select(ListTour.all.map { |c| [c.name, c.id] }), { prompt: 'Select a listtour' }, class: 'form-control' %>
+    </div>
   <div class="field">
     <%= form.label :status %>
     <%= form.select :status, options_for_select(Tour.statuses.map { |key, value| [key.humanize, key] }), {prompt: "Select status of Tour..."}, class: "form-control" %>
@@ -15,4 +23,5 @@
   <div class="actions">
     <%= form.submit "#{action} Tour" %>
   </div>
-<% end %>
+ <% end %>
+ 

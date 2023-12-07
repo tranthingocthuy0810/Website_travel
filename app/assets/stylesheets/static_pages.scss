@@ -1,8 +1,176 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-section{
-    background-image: url("images/travel.jpg");
-    height: 500px;
-    width: 100%;
+
+/*==================== hero-header =================*/
+:root{
+    --primary: #86b817;
+    --yellow: #FFBF0A;
+    --secondary: #86b817;
+    --light: #f5f5f5;
+    --dark: #141414;
 }
+
+/*=============Navbar================*/
+.navbar-light .navbar-nav .nav-link{
+    font-family: 'Nunito', sans-serif;
+    position: relative;
+    margin-right: 25px;
+    padding: 35px 0;
+    color: #ffffff !important;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.5s;
+    outline: none;
+}
+
+@media(min-width: 992px){
+    .navbar-light{
+        position: absolute;
+        width: 100%;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+        z-index: 999;
+    }
+    .navbar-light .navbar-nav .nav-link::before{
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -1px;
+        left: 50%;
+        background: var(--primary);
+        transition: 0.5s;
+    }
+    .navbar-light .navbar-nav .nav-link:hover::before,
+    .navbar-light .navbar-nav .nav-link.active::before{
+        width: calc(100% -2px);
+        left: 1px;
+    }
+}
+@media (max-width: 991.98px){
+    .navbar-light .navbar-collapse{
+        margin-top: 15px;
+        border-top: 1px solid #dddddd;
+    }
+    .navbar-light .navbar-nav .nav-link{
+        padding: 10px 0;
+        margin-left: 0;
+        color: var(--dark) !important;
+    }
+}
+
+.hero-header{
+    background: linear-gradient(rgba(20,20,31,0.7), rgba(20,20,31,0.7)), url(3.webp);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.service-item{
+    box-shadow: 0 0 45px rgba(0,0,0,0.08);
+    transition: 0.5;
+}
+.service-item:hover{
+    background: var(--yellow);
+}
+.service-item *{
+    transition: 0.5s;
+}
+.service-item:hover *{
+    color: var(--light) !important
+}
+.destination img{
+    transition: 0.5s;
+}
+.destination a:hover img{
+    transform: scale(1.1);
+}
+
+.package-item{
+    box-shadow: 0 0 45px rgba(0,0,0,0.08);
+}
+.package-item img{
+    transition: 0.5s;
+}
+.package-item:hover img{
+    transform: scale(1.1);
+}
+.btn{
+    font-family: 'Nuito', sans-serif;
+    font-weight: 600;
+    transition: 0.5s;
+}
+.btn.btn-warning,
+.btn.btn-secondary{
+    color: #ffffff;
+}
+.btn-square{
+    width: 38px;
+    height: 38px;
+}
+/*=================Booking section ==================*/
+.booking{
+    background: linear-gradient(rgba(15, 23, 43, 0.7), rgba(15, 23, 43, 0.7)), url(booking.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.testimonial-carousel::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to right, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0)100%);
+    z-index: 1;
+}
+
+.testimonial-carousel::before{
+    position: absolute;
+    content: "";
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 0;
+    background: linear-gradient(to left, rgba(255, 255, 255, 1)0%, rgba(255, 255, 255, 0)100%);
+    z-index: 1;
+}
+@media (min-width: 768px){
+    .testimonial-carousel::before{
+        width: 200px;
+    }
+}
+
+.testimonial-carousel .owl-item .testimonial-item,
+.testimonial-carousel .owl-item .testimonial-item *{
+    transition: 0.5s;
+}
+
+.testimonial-carousel .owl-item .testimonial-item{
+    background: var(--primary) !important;
+    border-color: var(--primary) !important;
+}
+
+.testimonial-carousel .owl-item .testimonial-item *{
+    color: #ffffff !important;
+}
+.testimonial-carousel .owl-dots {
+    margin-top: 24px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+testimonial-carousel .owl-dot{
+    position: relative;
+    display: inline-block;
+    margin: 0 5px;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 15px;
+}
+

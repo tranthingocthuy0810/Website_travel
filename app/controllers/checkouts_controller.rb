@@ -22,7 +22,8 @@ class CheckoutsController < ApplicationController
       })
   
       respond_to do |format|
-        format.js
+        format.html {redirect_to root_path }
+        format.js 
       end
     end
 

@@ -1,17 +1,395 @@
-<section>
-</section>
-<h1>Home client</h1>
-<%= render "category" %>
-<h1>Home client</h1>
-<% if @tours.any? %>
-  <h2>Your Tours:</h2>
-  <ul>
+<div class="container-fluid position-relative p-0">
+  <div class="container-fluid bg-warning py-5 mb-5 hero-header">
+    <div class="container py-5">
+      <div class="row justify-content-center my-5">
+      <div class="col-lg-10 pt-lg-5 mt-lg-5 text-center">
+        <h1 class="display-3 text-white mb-3">Enjoy Your Vacation With Us</h1>
+        <p class="fs-4 text-white mb-4">Lorem ipsum dolor, sit hhwb hdwg bhdwhe dhwwh bhwhh</p>
+        <div class="position-relative w-75 mx-auto">
+          <input type="text" class="form-control border-0 rounded-pill w-100 py-3 ps-4 pe-5" placeholder="Eg: ThaiLan">
+          <button type="button" class="btn btn-warning rounded-pill py-2 px-4 position-absolute top-0 end-0 me-2" style="margin-top: 7px;">Search</button>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="row g-5">
+      <div class="col-lg-6" style="min-height:400px;">
+        <div class="position-relative h-100">
+          <%= image_tag('about.png', style:"object-fit:cover", class:"img-fluid position-absolute w-100 h-100") %>
+        </div>
+      </div>
+
+      <div class="col-lg-6" style="min-height:400px;">
+        <h6 class="section-title bg-white text-start text-warning pe-3"> About Us</h6>
+        <h1 class="mb-4">Welcome to <span class="text-warning">Tourist</span></h1>
+        <p class="mb-4">Vietnam opens its door widely to welcome visitors all around the world! Starting from 15th August 2023, Vietnam extends e-visa validity to 90 days and unilateral visa exemption will be valid in 45 days!
+        We are more than happy to welcome you all here and admire our stunning landscapes, free your soul on white sandy beaches, experience our unique and beautiful culture and meet the people in the most friendly country. </p>
+        <p class="mb-4">Particularly, to indulge in our scrumptious cuisine at Michelin rated restaurants or to join us in outstanding mega culture, music, sports and tourism events!
+        Let’s live to the fullest in Vietnam!</p>
+        <div class="row gy-2 gx-4 mb-4">
+          <div class="col-sm-6">
+            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Frist Class Flights</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Frist Class Flights</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Frist Class Flights</p>
+            <p class="mb-0"><i class="fa fa-arrow-right text-warning me-2"></i>Frist Class Flights</p>
+          </div>
+        </div>
+        <div class="btn btn-warning py-3 px-5 mt-2">Read More</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-warning px-3">Services</h6>
+      <h1 class="mb-5">Our Services</h1>
+    </div>
+
+    <div class="row g-4">
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-globe text-warning mb-4"></i>
+            <h5>WorlWide Tours</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-hotel text-warning mb-4"></i>
+            <h5>Hotel Reservation</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-user text-warning mb-4"></i>
+            <h5>Travel Guides</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-cog text-warning mb-4"></i>
+            <h5>Event Management</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+    
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-hotel text-warning mb-4"></i>
+            <h5>Hotel Reservation</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-user text-warning mb-4"></i>
+            <h5>Travel Guides</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-hotel text-warning mb-4"></i>
+            <h5>Hotel Reservation</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-3 col-sm-6">
+        <div class="service-item rounded pt-3">
+          <div class="p-4">
+            <i class="fa fa-3x fa-user text-warning mb-4"></i>
+            <h5>Travel Guides</h5>
+            <p>Lorem ipsum dolor sit, amet nsh gwg hwheg hdhw hdhweh gdgwe ghdwh dwge hweh . Huge bgwe gdsg egwg sg kdo?</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5 destination">
+  <div class="container">
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-warning px-3">
+        Destination
+      </h6>
+      <h1 class="mb-5">Popular Destination</h1>
+    </div>
+
+    <div class="row g-3">
+      <div class="col-lg-7 col-md-6">
+        <div class="row g-3">
+          <div class="col-lg-12 col-md-12">
+            <a href="" class="d-block position-relative overflow-hidden">
+              <%= image_tag('nhatban.jpg', class:"img-fluid") %>
+              <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">50% OFF</div>
+              <div class="bg-white text-warning fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Japan</div>
+            </a>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <a href="" class="d-block position-relative overflow-hidden">
+              <%= image_tag('thailand.jpg', class:"img-fluid") %>
+              <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">30% OFF</div>
+              <div class="bg-white text-warning fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">ThaiLand</div>
+            </a>
+          </div>
+
+          <div class="col-lg-6 col-md-12">
+            <a href="" class="d-block position-relative overflow-hidden">
+              <%= image_tag('hagiang.jpg', class:"img-fluid") %>
+              <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">40% OFF</div>
+              <div class="bg-white text-warning fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Ha Giang</div>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-5 col-md-6" style="min-height: 350px;">
+        <a href="" class="d-block position-relative h-100 overflow-hidden">
+          <%= image_tag('singapore.webp', class:"img-fluid position-absolute w-100", style:"object-fit: cover;") %>
+          <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">20% OFF</div>
+          <div class="bg-white text-warning fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Singapore</div>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-warning px-3">Packages</h6>
+      <h1 class="mb-5">Awesome Packages</h1>
+    </div>
+    <div class="row g-4 justify-content-center">
     <% @tours.each do |tour| %>
-      <li><%= tour.title %></li>
-      <td><%= image_tag(tour.image, class: "image") if tour.image.attached?%> </td>
-      <td><%= link_to 'Detail', static_page_path(tour.id) %></td>
-    <% end %>
-  </ul>
-<% else %>
-  <p>You haven't created any tours yet.</p>
-<% end %>
+      <div class="col-lg-4 col-md-6">
+
+      
+      
+        <div class="package-item">
+          <div class="overflow-hidden">
+          <%= image_tag(tour.image, class: "img-fluid") if tour.image.attached?%>
+          </div>
+
+          <div class="d-flex border-bottom">
+            <small class="flex-fill text-center border-end py-2">
+              <i class="fa fa-map-marker-alt text-warning me-2"></i> <%= tour.title %>
+            </small>
+
+            <small class="flex-fill text-center border-end py-2">
+              <i class="fa fa-calendar-alt text-warning me-2"></i> 3 days
+            </small>
+
+            <small class="flex-fill text-center border-end py-2">
+              <i class="fa fa-user-alt text-warning me-2"></i> 2 Person
+            </small>
+          </div>
+
+          <div class="text-center p-4">
+            <h3 class="mb-0">$149.00</h3>
+            <div class="mb-3">
+              <small class="fa fa-star text-warning"></small>
+              <small class="fa fa-star text-warning"></small>
+              <small class="fa fa-star text-warning"></small>
+              <small class="fa fa-star text-warning"></small>
+              <small class="fa fa-star text-warning"></small>
+            </div>
+            <p>There are also other interesting places such as museums, parks, as well as various Shopping centres in Bangkok. There are both chilling places like Chatuchak Weekend Market, Sampeng Market and Phahurat night market.</p>
+            <div class="d-flex justify-content-center mb-2">
+              <%= link_to 'Read more', static_page_path(tour.id), class:"btn btn-sm btn-warning px-3", style:"border-radius: 30px 0 0 30px;" %>
+              <%= link_to 'Book now', static_page_path(tour.id), class:"btn btn-sm btn-warning px-3", style:"border-radius: 0 30px 30px 0;" %>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="booking p-5">
+      <div class="row g-5 align-items-center">
+        <div class="col-md-6 text-white">
+          <h6 class="text-white text-uppercase">Booking</h6>
+          <h1 class="text-white mb-4">Online Booking</h1>
+          <p class="mb-4">Lorem ipsum dolar sit met consectetur hh gaf koua ga rets suy ffs vrwevs desr jau.</p>
+          <p class="mb-4">Lorem ipsum dolar sit met consectetur hh gaf koua ga rets suy ffs vrwevs desr jau.</p>
+          <a href="" class="btn btn-outline-light py-3 px-5 mt-2">Read More</a>
+        </div>
+
+        <div class="col-md-6">
+          <h1 class="text-white mb-4">
+            Book A Tour
+          </h1>
+          <form action="">
+            <div class="row g-3">
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="text" class="form-control bg-transparent" id="name" placeholder="Your Name">
+                  <label for="name">Your Name</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <input type="email" class="form-control bg-transparent" id="email" placeholder="Your Email">
+                  <label for="email">Your Email</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating" id="date3">
+                  <input type="text" class="form-control bg-transparent" id="datetime">
+                  <label for="datetime">Date & Time</label>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-floating">
+                  <select name="" id="select1" class="form-select bg-transparent">
+                    <option value="1">Destination 1</option>
+                    <option value="2">Destination 2</option>
+                    <option value="3">Destination 3</option>
+                  </select>
+                  <label for="select1">Destination</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <div class="form-floating">
+                  <textarea class="form-control bg-transparent" placeholder="Special Request" id="message" style="height: 100px;"></textarea>
+                  <label for="message">Special Request</label>
+                </div>
+              </div>
+
+              <div class="col-12">
+                <button class="btn btn-outline-light w-100 py-3" type="submit">Book Now</button>
+              </div>
+            </div>
+          <form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center pb-4">
+      <h6 class="section-title bg-white text-center text-warning px-3">Process</h6>
+      <h1 class="mb-5">Easy Steps</h1>
+    </div>
+
+    <div class="row gy-5 gx-4 justify-content-center">
+      <div class="col-lg-4 col-sm-6 text-center pt-4">
+        <div class="position-relative border border-warning pt-5 pb-4 px-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+            <i class="fa fa-globe fa-3x text-white"></i>
+          </div>
+          <h5 class="mt-4">Choose A Destination</h5>
+          <hr class="w-25 mx-auto bg-warning mt-0">
+          <p class="mb-0">Lorem is object ht sf hfdgy bsg et qf sgf dss er qr ssb kos geg dsh.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 text-center pt-4">
+        <div class="position-relative border border-warning pt-5 pb-4 px-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+            <i class="fa fa-dollar-sign fa-3x text-white"></i>
+          </div>
+          <h5 class="mt-4">Choose A Destination</h5>
+          <hr class="w-25 mx-auto bg-warning mt-0">
+          <p class="mb-0">Lorem is object ht sf hfdgy bsg et qf sgf dss er qr ssb kos geg dsh.</p>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-sm-6 text-center pt-4">
+        <div class="position-relative border border-warning pt-5 pb-4 px-4">
+          <div class="d-inline-flex align-items-center justify-content-center bg-warning rounded-circle position-absolute top-0 start-50 translate-middle shadow" style="width: 100px; height: 100px;">
+            <i class="fa fa-plane fa-3x text-white"></i>
+          </div>
+          <h5 class="mt-4">Choose A Destination</h5>
+          <hr class="w-25 mx-auto bg-warning mt-0">
+          <p class="mb-0">Lorem is object ht sf hfdgy bsg et qf sgf dss er qr ssb kos geg dsh.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container-xxl py-5">
+  <div class="container">
+    <div class="text-center">
+      <h6 class="section-title bg-white text-center text-warning px-3">Testimonial</h6>
+      <h1 class="mb-5">Our Client Say!!!</h1>
+    </div>
+
+    <div class="owl-carousel testimonial-carousel position-relative">
+      <div class="testimonial-item bg-white text-center border p-4">
+        <%= image_tag('po.jpg', class:"bg-white rounded-circle shadow p-1 mx-auto mb-3", style:"width: 80px; height: 80px;") %>
+        <h5 class="mb-0">John Doe</h5>
+        <p>Hoi An, Viet Nam</p>
+        <p class="mb-0">VietNam is very beautiful, I hsj kkgew te dgfe gwfe sfq dbgqet gqeg jahg mjwg gfwve qt eyu nsge mwnhi ngg qtr qtri.</p>
+      </div>
+
+      <div class="testimonial-item bg-white text-center border p-4">
+        <%= image_tag('pr.jpg', class:"bg-white rounded-circle shadow p-1 mx-auto mb-3", style:"width: 80px; height: 80px;") %>
+        <h5 class="mb-0">John Doe</h5>
+        <p>Hoi An, Viet Nam</p>
+        <p class="mb-0">VietNam is very beautiful, I hsj kkgew te dgfe gwfe sfq dbgqet gqeg jahg mjwg gfwve qt eyu nsge mwnhi ngg qtr qtri.</p>
+      </div>
+
+      <div class="testimonial-item bg-white text-center border p-4">
+        <%= image_tag('hq.jpg', class:"bg-white rounded-circle shadow p-1 mx-auto mb-3", style:"width: 80px; height: 80px;") %>
+        <h5 class="mb-0">John Doe</h5>
+        <p>Hoi An, Viet Nam</p>
+        <p class="mb-0">VietNam is very beautiful, I hsj kkgew te dgfe gwfe sfq dbgqet gqeg jahg mjwg gfwve qt eyu nsge mwnhi ngg qtr qtri.</p>
+      </div>
+
+      <div class="testimonial-item bg-white text-center border p-4">
+        <%= image_tag('2.jpg', class:"bg-white rounded-circle shadow p-1 mx-auto mb-3", style:"width: 80px; height: 80px;") %>
+        <h5 class="mb-0">John Doe</h5>
+        <p>Hoi An, Viet Nam</p>
+        <p class="mb-0">VietNam is very beautiful, I hsj kkgew te dgfe gwfe sfq dbgqet gqeg jahg mjwg gfwve qt eyu nsge mwnhi ngg qtr qtri.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
