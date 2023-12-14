@@ -1,6 +1,7 @@
 class Tour < ApplicationRecord
     belongs_to :user, optional: true
     belongs_to :list_tour
+    has_many :bookings
     validates :title, presence: true, uniqueness: true
     validates :description, presence: true
     validates :price, numericality: {greater_than_or_equal_to: 0}

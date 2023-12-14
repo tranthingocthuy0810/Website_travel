@@ -1,33 +1,32 @@
 class CheckoutsController < ApplicationController
-    before_action :authenticate_user!
-  
-    def create
-      tour = Tour.find(params[:id])
-      @session = Stripe::Checkout::Session.create({
-        customer: current_user.stripe_customer_id,
-        payment_method_types: ['card'],
-        line_items: [{
+  skip_before_action :verify_authenticity_token, only: [:create]
+
+  def new
+    @booking = Booking.find(params[:booking_id])
+  end
+
+  def create
+    booking = Booking.find(params[:booking_id])
+    tour = booking.tour
+
+    session = Stripe::Checkout::Session.create(
+      payment_method_types: ['card'],
+      line_items: [{
         price_data: {
-            currency: 'usd',
-            product_data: {
+          currency: 'usd',
+          product_data: {
             name: tour.title,
-            },
-            unit_amount: tour.price, 
+            description: tour.description,
+          },
+          unit_amount: tour.price * 100,
         },
         quantity: 1,
-        }],
-        mode: 'payment',
-        success_url: root_url,
-        cancel_url: root_url,
-      })
-  
-      respond_to do |format|
-        format.html {redirect_to root_path }
-        format.js 
-      end
-    end
+      }],
+      mode: 'payment',
+      success_url: root_url,
+      cancel_url: root_url,
+    )
 
-    def success
-    end
+    redirect_to 
   end
-  
+end

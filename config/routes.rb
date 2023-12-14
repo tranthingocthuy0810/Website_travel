@@ -5,9 +5,7 @@ Rails.application.routes.draw do
   get '/help', to: 'static_pages#help'
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy' 
-       
- end
- 
+  end
 
   namespace :admin do
     resource :users
@@ -18,6 +16,8 @@ Rails.application.routes.draw do
   end
 
   resources :static_pages, only: %i(index show)
-  post "checkouts/create", to: "checkouts#create"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  resources :bookings do
+    resource :checkout, only: [:new, :create], controller: 'checkouts' 
+  end
 end
