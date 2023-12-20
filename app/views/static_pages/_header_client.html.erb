@@ -23,25 +23,21 @@
       <nav id="navbar" class="navbar">
         <ul>
           <li><%= link_to "Home", root_path%></li>
-          <li class="dropdown"><%= link_to "Domestic trips ", root_path, class: "bi bi-chevron-down dropdown-indicator" %>
-            <ul>
-              <li><a href="#">Drop Down 1</a></li>
-              <li class="dropdown"><a href="#"><span>Deep Drop Down</span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
-                <ul>
-                  <li><a href="#">Deep Drop Down 1</a></li>
-                  <li><a href="#">Deep Drop Down 2</a></li>
-                  <li><a href="#">Deep Drop Down 3</a></li>
-                  <li><a href="#">Deep Drop Down 4</a></li>
-                  <li><a href="#">Deep Drop Down 5</a></li>
-                </ul>
-              </li>
-              <li><a href="#">Drop Down 2</a></li>
-              <li><a href="#">Drop Down 3</a></li>
-              <li><a href="#">Drop Down 4</a></li>
-            </ul>
-          </li>
-          <li><%= link_to "Overseas trips", root_path%></li>
-          <li><%= link_to "Service", root_path%></li>
+          <% Category.all.each do |category| %>
+            <li class="dropdown"><%= link_to category.tourname, list_tour_path(category.id), class: "bi bi-chevron-down dropdown-indicator" %>
+              <ul>
+                <% category.list_tour.each do |list_tour| %>
+                  <li class="dropdown"><a href="#"><span><%= list_tour.name %></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                  <ul>
+                  <% list_tour.tour.each do |tour| %>
+                    <li><%=  link_to tour.title, static_page_path(tour.id) %></li>
+                  <% end %>
+                  </ul>
+                </li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
           <li><%= link_to "About", root_path%></li>
           <li><%= link_to "Contact", root_path%></li>
           
@@ -49,7 +45,7 @@
         </ul>
         <% if user_signed_in? %>
         <div class="dropdown mx-5"><%= image_tag(current_user.avatar_thumbnail, class: "bi bi-chevron-down dropdown-indicator img-user") %>
-            <ul>
+            <ul>a
               <li><a href="#"><%= current_user.name %></a></li>
               <li><%= link_to "Profile" %></li>
               <li><%= link_to "Settings", edit_user_registration_path %></li>

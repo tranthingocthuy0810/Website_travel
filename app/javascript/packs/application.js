@@ -22,36 +22,3 @@ require("channels")
 require("jquery")
 import "bootstrap"
 
-document.addEventListener("DOMContentLoaded", function() {
-  const form = document.querySelector("form[data-target='checkout.form']");
-
-  if (form) {
-    form.addEventListener("submit", function(event) {
-      event.preventDefault();
-
-      fetch(form.action, {
-        method: form.method,
-        body: new FormData(form),
-        headers: {
-          'Accept': 'application/json',
-          'X-CSRF-Token': document.querySelector('meta[name="csrf-token"]').content
-        }
-      })
-      .then(response => response.json())
-      .then(data => {
-        if (data.success) {
-          var stripe = Stripe("<%= Rails.application.credentials[:stripe][:public] %>");
-          stripe.redirectToCheckout({
-            sessionId: data.session_id
-          }).then(function(result) {
-            if (result.error) {
-              console.error(result.error.message);
-            }
-          });
-        } else {
-          console.error(data.error_message);
-        }
-      });
-    });
-  }
-});

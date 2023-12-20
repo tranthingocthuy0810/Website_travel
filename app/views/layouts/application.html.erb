@@ -19,8 +19,8 @@
 
   <body>
     <% unless current_page?(new_user_session_path) || current_page?(user_session_path) %>
-      <% if user_signed_in? && current_user.admin? %>
-        <%= render "static_pages/header_admin" %>
+      <% if user_signed_in? && (current_user.admin? || current_user.manager?) %>
+        <%= render "admin/home/header_admin" %>
       <% else %>
         <%= render "static_pages/header_client" %>
       <% end %>

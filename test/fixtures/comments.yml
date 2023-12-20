@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  commenter: MyString
+  body: MyText
+  tour: one
+  user: one
+
+two:
+  commenter: MyString
+  body: MyText
+  tour: two
+  user: two
