@@ -1,0 +1,9 @@
+<h2>Product Recommendations</h2>
+<% @tour_recommendations.each do |tour| %>
+  <div class="recommendation">
+    <h3><%= tour.name %></h3>
+    <p><%= tour.description %></p>
+    <p>Price: <%= tour.price %></p>
+    <!-- Add other attributes as needed -->
+  </div>
+<% end %>

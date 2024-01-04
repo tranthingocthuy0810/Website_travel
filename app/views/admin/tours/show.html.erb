@@ -15,6 +15,8 @@
     <%= link_to 'Edit', edit_admin_tour_path(@tour) %>
     <% end %>
     <%= link_to 'Back', admin_tours_path %>
+    <%= link_to 'Destroy', admin_tour_path(@tour), method: :delete, data: { confirm: 'Are you sure?' } %>
+
     
 </div>
 <!-- Footer -->

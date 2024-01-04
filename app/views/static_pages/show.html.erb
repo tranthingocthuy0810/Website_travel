@@ -1,80 +1,25 @@
-<% if policy(Tour).show? %>
+<% if @tour %>
   <%= @tour.title %> </br>
   <%= @tour.description %> </br>
   <span>Gia: </span><%= @tour.price %> </br>
-  <span>Gia: </span><%= @tour.id %> </br>
+  <span>id: </span><%= @tour.id %> </br>
+  <span>sale count: </span><%= @tour.sales_count %> </br>
+  <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
   <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
-  
 <% else %>
-  <p>You are not authorized to view this product.</p>
+  <p>Tour not found.</p>
 <% end %>
 
-<main id="main">
+<h2>Product Recommendations</h2>
+<% @tour_recommendations.each do |tour| %>
+  <div class="recommendation">
+    <h3>Tour_id: <%= tour.id %></h3>
+    <h3><%= tour.title %></h3>
+    <p><%= tour.description %></p>
+    <p>Price: <%= tour.price %></p>
+    <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
+    <%= link_to 'Read more', static_page_path(tour.id), class:"btn btn-sm btn-read px-3", style:"border-radius: 30px 0 0 30px;" %>
+    <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>    <!-- Add other attributes as needed -->
+  </div>
+<% end %>
 
-    <!-- ======= Breadcrumbs Section ======= -->
-    <section class="breadcrumbs">
-      <div class="container">
-
-        <div class="d-flex justify-content-between align-items-center">
-          <h2>Portfolio Details</h2>
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li>Portfolio Details</li>
-          </ol>
-        </div>
-
-      </div>
-    </section><!-- Breadcrumbs Section -->
-
-    <!-- ======= Portfolio Details Section ======= -->
-    <section id="portfolio-details" class="portfolio-details">
-      <div class="container">
-
-        <div class="row gy-4">
-
-          <div class="col-lg-8">
-            <div class="portfolio-details-slider swiper">
-              <div class="swiper-wrapper align-items-center">
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-1.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-details-3.jpg" alt="">
-                </div>
-
-              </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          </div>
-
-          <div class="col-lg-4">
-            <div class="portfolio-info">
-              <h3>Project information</h3>
-              <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
-              </ul>
-            </div>
-            <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
-              <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-  </main>

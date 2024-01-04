@@ -4,16 +4,19 @@ class BookingsController < ApplicationController
   def new
     @tour = Tour.find(params[:tour_id])
     @booking = Booking.new
+    @session = stripe_session
   end
 
   def create
     booking_params = params.require(:booking).permit(:start_date, :end_date, :tour_id)
     @tour = Tour.find(booking_params[:tour_id])
     @booking = current_user.bookings.build(booking_params.merge(tour: @tour))
-
+    @session = stripe_session
+  
     if @booking.save
-      session_id = stripe_session.id
-      render json: { success: true, session_id: session_id }
+      respond_to do |format|
+        format.js
+      end
     else
       render json: { success: false, error_message: "Booking failed" }
     end
@@ -23,6 +26,7 @@ class BookingsController < ApplicationController
 
   def stripe_session
     Stripe::Checkout::Session.create(
+      customer: current_user.stripe_customer_id,
       payment_method_types: ['card'],
       line_items: [{
         price_data: {
@@ -31,7 +35,7 @@ class BookingsController < ApplicationController
             name: @tour.title,
             description: @tour.description,
           },
-          unit_amount: @tour.price * 100,
+          unit_amount: @tour.price,
         },
         quantity: 1,
       }],

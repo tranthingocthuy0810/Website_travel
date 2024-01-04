@@ -3,6 +3,7 @@ class Admin::ToursController < ApplicationController
    # GET /posts or /posts.json
   def index
     @tours = policy_scope(Tour)
+    @tours = Tour.all.page(params[:page]).per(5)
   end
  
  
@@ -65,14 +66,13 @@ class Admin::ToursController < ApplicationController
  
   # DELETE /tour/1 or /tour/1.json
   def destroy
+    @tour= Tour.find(params[:id])
     @tour.destroy
- 
- 
+    authorize @tour
     respond_to do |format|
       format.html { redirect_to admin_tours_path, notice: "Tour was successfully destroyed." }
       format.json { head :no_content }
     end
-    authorize @tour
   end
  
  

@@ -1,12 +1,15 @@
 <h1>Tour: <%= @tour.id %></h1>
 <%= form_with model: @booking do |form| %>
-  <%= form.hidden_field :tour_id, value: @tour.id %>
+ <%= form.hidden_field :tour_id, value: @tour.id %>
 
-  <%= form.label :start_date %>
-  <%= form.date_field :start_date %>
 
-  <%= form.label :end_date %>
-  <%= form.date_field :end_date %>
+ <%= form.label :start_date %>
+ <%= form.date_field :start_date %>
 
-  <%= form.submit 'Check out', remote: true %></br>
+
+ <%= form.label :end_date %>
+ <%= form.date_field :end_date %>
+
+
+ <%= form.submit 'Check out', remote: true %></br>
 <% end %>

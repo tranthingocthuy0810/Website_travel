@@ -1,20 +1,6 @@
-$.ajax({
-  type: 'POST',
-  url: '/bookings',
-  data: {
-    booking: {
-      start_date: '<%= @booking.start_date %>',
-      end_date: '<%= @booking.end_date %>',
-      tour_id: '<%= @booking.tour_id %>'
-    }
-  },
-  dataType: 'json'
-  success: function(response) {
-    if (response.success) {
-      var sessionId = response.session_id;
-      window.location.href = `https://checkout.stripe.com/pay/${sessionId}`;
-    } else {
-      console.error(response.error_message);
-    }
-  }
+var stripe = Stripe("<%= Rails.application.credentials[:stripe][:public] %>");
+stripe.redirectToCheckout({
+    sessionId: '<%= @session.id %>'
+}).then(function (result) {
+     
 });

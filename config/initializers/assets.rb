@@ -15,6 +15,5 @@ Rails.application.config.assets.precompile += %w( admin.js admin.css )
 Rails.application.config.assets.precompile += %w( bootstrap.min.js jquery.min.js popper.min.js owl.carousel.min.js chart.min.js)
 Rails.application.config.assets.precompile += %w( style.js )
 Rails.application.config.assets.precompile += %w( jquery.easing.min.js sb-admin-2.min.js bootstrap.bundle.min.js)
-
 Rails.application.config.assets.precompile += %w( sb-admin-2.css sb-admin-2.min.css)
 

@@ -51,15 +51,13 @@
                                     <% if policy(Tour).update? %>
                                         <%= link_to 'Edit tour', edit_admin_tour_path(tour) %>
                                     <% end %>
-                                    <% if policy(Tour).destroy? %>
-                                        <%= link_to 'Destroy', admin_tour_path(tour), method: :delete, data: { confirm: 'Are you sure?' } %>
-                                    <% end %>
-                                        
+                                    <%= link_to 'Destroy', admin_tour_path(tour), method: :delete, data: { confirm: 'Are you sure?' } %>                                
                                 </td>
                             </tr>
                             <% end %>
                         </tbody>                   
                     </table>
+                    <%= paginate @tours, theme: 'twitter-bootstrap-3' %>
                         <% if policy(Tour).create? %>
                             <button type="button" class="btn btn-outline-primary"><%= link_to 'New Tour', new_admin_tour_path %></button>                                
                         <% end %>

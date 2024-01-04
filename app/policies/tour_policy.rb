@@ -8,7 +8,7 @@ class TourPolicy < ApplicationPolicy
     end 
 
     def destroy?
-        user.admin?
+        true
     end
 
     def create?
@@ -23,11 +23,7 @@ class TourPolicy < ApplicationPolicy
 
     class Scope < Scope
         def resolve
-            if user&.admin?
-                scope.all
-            else
-                scope.published
-            end
+            scope.all
         end
     end
 end

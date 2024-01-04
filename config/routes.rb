@@ -10,16 +10,25 @@ Rails.application.routes.draw do
   end
 
   namespace :admin do
+    concern :paginatable do
+      get '(page/:page)', action: :index, on: :collection, as: ''
+    end
     get "home", to: "home#home_admin", as: :home_admin
     resource :users
-    resources :tours
+    resources :tours, concerns: :paginatable
     resources :categories
-    resources :list_tours
-    get "tours"
+    resources :list_tours    
   end
 
-  resources :static_pages, only: %i(index show)
-  resources :bookings do
-    resource :checkout, only: [:new, :create], controller: 'checkouts' 
+  resources :static_pages, only: %i(index show) do
+    collection do
+      get :show_recommendations
+    end
   end
+  resources :bookings do
+    resource :checkout, only: [:new, :create], controller: 'checkouts'
+    get 'success', on: :collection, to: 'bookings#success'
+  end
+  resource :webhooks, only: [:create]
 end
+
