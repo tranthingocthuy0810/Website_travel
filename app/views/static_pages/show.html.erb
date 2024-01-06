@@ -1,9 +1,25 @@
-<% if policy(Tour).show? %>
+<% if @tour %>
   <%= @tour.title %> </br>
   <%= @tour.description %> </br>
   <span>Gia: </span><%= @tour.price %> </br>
-  <%= button_to "Checkout", checkouts_create_path, params: {id: @tour.id}, remote: true %> </br>
-  <%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
+  <span>id: </span><%= @tour.id %> </br>
+  <span>sale count: </span><%= @tour.sales_count %> </br>
+  <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
+  <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
 <% else %>
-  <p>You are not authorized to view this product.</p>
+  <p>Tour not found.</p>
 <% end %>
+
+<h2>Product Recommendations</h2>
+<% @tour_recommendations.each do |tour| %>
+  <div class="recommendation">
+    <h3>Tour_id: <%= tour.id %></h3>
+    <h3><%= tour.title %></h3>
+    <p><%= tour.description %></p>
+    <p>Price: <%= tour.price %></p>
+    <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
+    <%= link_to 'Read more', static_page_path(tour.id), class:"btn btn-sm btn-read px-3", style:"border-radius: 30px 0 0 30px;" %>
+    <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>    <!-- Add other attributes as needed -->
+  </div>
+<% end %>
+

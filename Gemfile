@@ -35,10 +35,11 @@ gem 'omniauth-rails_csrf_protection'
 gem 'image_processing'
 gem 'stimulus-rails'
 gem 'importmap-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem "font-awesome-sass"
+gem 'font-awesome-sass'
+gem 'faker'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -72,9 +73,10 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem "pundit", "~> 2.3"
-
-gem "stripe", "~> 9.1"
-
+gem "stripe"
 gem "webpacker", "~> 5.4"
+gem "kaminari"
+gem "ransack"
+gem "sassc-rails"
+gem "net-http"

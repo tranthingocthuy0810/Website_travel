@@ -156,7 +156,7 @@ checked program was:
 /* end */
 
 "gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccMbjJhq.o: in function `t':
+/usr/bin/ld: /tmp/ccZQTw33.o: in function `t':
 /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.5/ext/mysql2/conftest.c:17: undefined reference to `rb_enc_interned_str'
 collect2: error: ld returned 1 exit status
 checked program was:

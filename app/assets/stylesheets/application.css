@@ -1,0 +1,645 @@
+/*
+* This is a manifest file that'll be compiled into application.css, which will include all the files
+* listed below.
+*
+* Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+* vendor/assets/stylesheets directory can be referenced here using a relative path.
+*
+* You're free to add application-wide styles to this file and they'll appear at the bottom of the
+* compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+* files in this directory. Styles in this file should be added after the last require_* statement.
+* It is generally better to create a new file per style scope.
+*
+*= require_tree .
+*= require_self
+*= require sb-admin-2
+*/
+@import 'bootstrap';
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'poppins', sans-serif;
+}
+.header{
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)),url(bg-hero.jpg);
+  background-size: cover;
+  background-position: center;
+}
+nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 7%;
+}
+.logo{
+  width: 80px;
+  height: 50px;
+  cursor: pointer;
+}
+.nav-links li{
+  list-style: none;
+  display: inline-block;
+  margin: 10px 30px;
+}
+.nav-links li a{
+  text-decoration: none;
+  color: #fff;
+}
+.register-btn{
+  background: #fff;
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+}
+.hero{
+  padding: 0 7%;
+}
+.header h1{
+  font-size: 4vw;
+  font-weight: 500;
+  color: #fff;
+  text-align: center;
+  padding-top: 22%;
+}
+.search-bar{
+  background: #fff;
+  width: 70%;
+  margin: 30px auto;
+  padding: 6px 10px 6px 30px;
+  border-radius: 50px;
+}
+.search-bar form{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.search-bar form input{
+  display: block;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+.search-bar form button{
+  background: #ff5361;
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 0;
+  outline: none;
+  cursor: pointer;
+}
+.search-bar form button img{
+  width: 15px;
+  margin-top: 7px;
+}
+.location-input{
+  flex: 1;
+}
+.search-bar form{
+  font-weight: 600;
+}
+nav .fa-bars{
+  display: none;
+}
+/*---------exclusives-------------*/
+.sub-title{
+  margin: 50px 0 20px;
+  font-size: 2.2vw;
+  font-weight: 500;
+  color: #333;
+}
+.exclusives{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+.exclusives div .img{
+  width: 100%;
+  border-radius: 10px;
+}
+.exclusives div{
+  position: relative;
+}
+.exclusives div span{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  color: #fff;
+}
+/*-------------Trending Places------------*/
+.trending{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+.trending div img{
+  width: 100%;
+  border-radius: 10px;
+}
+.trending h3{
+  font-weight: 600;
+  margin-top: 10px;
+}
+/*----------Call to action------------*/
+.cta{
+  margin: 80px 0;
+  background-image: linear-gradient(to right, #3f2321, transparent),url(banner-2.png);
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  padding: 5%;
+  color: #fff;
+}
+.cta h3{
+  font-size: 4vw;
+  line-height: 5.3vw;
+  font-weight: 500;
+}
+.cta p{
+  font-size: 18px;
+  margin: 10px 0;
+}
+.cta-btn{
+  background: #ff5361;
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 30px;
+  border-radius: 8px;
+  margin-top: 20px;
+  display: inline-block;
+}
+/*------------Travellers Stories-----------------*/
+.stories{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin-bottom: 30px;
+}
+.stories div .img-stories{
+  width: 100%;
+  border-radius: 10px;
+}
+.stories div{
+  position: relative;
+  text-align: center;
+}
+.stories p{
+  width: 80%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 26px;
+}
+.start-btn{
+  text-decoration: none;
+  background: #ff5361;
+  color: #fff;
+  width: 80%;
+  max-width: 350px;
+  display: block;
+  text-align: center;
+  margin: 60px auto;
+  padding: 15px;
+  border-radius: 30px;
+  font-size: 20px;
+}
+/*---------about-msg-----------*/
+.about-msg{
+  text-align: center;
+  margin: 80px 0;
+  color: #333;
+  font-size: 17px;
+}
+.about-msg h2{
+  font-size: 28px;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+.active{
+  position: relative;
+}
+.active::after{
+  content: '';
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+}
+/*------------------Footer-------------------*/
+#footer {
+  background: #404040;
+  padding: 0 0 30px 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+#footer .footer-newsletter {
+  padding: 50px 0;
+  background: #404040;
+}
+
+#footer .footer-newsletter h4 {
+  font-size: 24px;
+  margin: 0 0 20px 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 600;
+}
+
+#footer .footer-newsletter form {
+  margin-top: 30px;
+  background: #fff;
+  padding: 6px 10px;
+  position: relative;
+  border-radius: 50px;
+}
+
+#footer .footer-newsletter form input[type=email] {
+  border: 0;
+  padding: 8px;
+  width: calc(100% - 140px);
+}
+
+#footer .footer-newsletter form input[type=submit] {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  border: 0;
+  background: none;
+  font-size: 16px;
+  padding: 0 30px;
+  margin: 3px;
+  background: #e96b56;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 50px;
+}
+
+#footer .footer-newsletter form input[type=submit]:hover {
+  background: #e6573f;
+}
+
+#footer .footer-top {
+  background: #3b3b3b;
+  border-top: 1px solid #474747;
+  border-bottom: 1px solid #474747;
+  padding: 60px 0 30px 0;
+}
+
+#footer .footer-top .footer-info {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-info h3 {
+  font-size: 18px;
+  margin: 0 0 20px 0;
+  padding: 2px 0 2px 0;
+  line-height: 1;
+  font-weight: 700;
+}
+
+#footer .footer-top .footer-info p {
+  font-size: 14px;
+  line-height: 24px;
+  margin-bottom: 0;
+  font-family: "Raleway", sans-serif;
+  color: #fff;
+}
+
+#footer .footer-top .social-links a {
+  font-size: 18px;
+  display: inline-block;
+  background: #545454;
+  color: #fff;
+  line-height: 1;
+  padding: 8px 0;
+  margin-right: 4px;
+  border-radius: 50%;
+  text-align: center;
+  width: 36px;
+  height: 36px;
+  transition: 0.3s;
+}
+
+#footer .footer-top .social-links a:hover {
+  background: #e96b56;
+  color: #fff;
+  text-decoration: none;
+}
+
+#footer .footer-top h4 {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  text-transform: uppercase;
+  position: relative;
+  padding-bottom: 12px;
+}
+
+#footer .footer-top .footer-links {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+#footer .footer-top .footer-links ul i {
+  padding-right: 2px;
+  color: #ec7f6d;
+  font-size: 18px;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul li {
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+#footer .footer-top .footer-links ul li:first-child {
+  padding-top: 0;
+}
+
+#footer .footer-top .footer-links ul a {
+  color: #fff;
+  transition: 0.3s;
+  display: inline-block;
+  line-height: 1;
+}
+
+#footer .footer-top .footer-links ul a:hover {
+  color: #e96b56;
+}
+
+#footer .footer-top .footer-contact {
+  margin-bottom: 30px;
+}
+
+#footer .footer-top .footer-contact p {
+  line-height: 26px;
+}
+
+#footer .copyright {
+  text-align: center;
+  padding-top: 30px;
+}
+
+#footer .credits {
+  padding-top: 10px;
+  text-align: center;
+  font-size: 13px;
+  color: #fff;
+}
+/*----------for small screen devices------*/
+@media only screen and (max-width: 700px){
+  .logo{
+    position: fixed;
+    top: -2%;
+    left: 7%;
+  }
+  nav{
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 7% 0;
+    background: #000;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 0.5s;
+  }
+  nav .nav-links li{
+    margin: 10px 0;
+    display: block;
+  }
+  .register-btn{
+    margin: 15px 0 30px;
+    display: inline-block;
+  }
+  nav .fa-bars{
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: #fff;
+    font-size: 28px;
+  }
+  .active::after{
+    left: -40px;
+    transform: translate(0, 50%);
+    bottom: 50%;
+  }
+  .hidemenu{
+    max-height: 300px;
+  }
+  .header h1{
+    padding-top: 200px;
+    font-size: 7vw;
+  }
+  .search-bar{
+    width: 90%;
+    margin: 30px auto;
+    padding: 30px 10px 30px;
+  }
+  .search-bar form{
+    display: block;
+  }
+  .search-bar form input{
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+/*----------------listing page-------*/
+.navbar-white{
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.05);
+}
+.navbar-white .nav-links li a{
+  color: #000;
+}
+.navbar-white .register-btn{
+  background: #ff5361;
+  color: #fff;
+}
+nav.navbar-white .fa-bars{
+  color: #000;
+}
+.navbar-white .active::after{
+  background: #ff5361;
+}
+.list-container{
+  margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.left-col{
+  flex-basis: 70%;
+}
+.right-col{
+  flex-basis: 25%;
+}
+.left-col h1{
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 30px;
+}
+.house{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 30px 0;
+  border-top: 1px solid #ccc;
+}
+.house-img{
+  flex-basis: 40%;
+}
+.house-info{
+  flex-basis: 58%;
+  color: #555;
+}
+.house-img img{
+  width: 100%;
+  border-radius: 12px;
+}
+.house-info h3{
+  font-weight: 600;
+  color: #333;
+  font-size: 22px;
+  margin: 4px 0;
+}
+.house-info i{
+  color: #ff5361;
+  font-size: 18px;
+  margin: 10px 1px;
+}
+.house-price{
+  text-align: right;
+}
+.house-price h4{
+  font-size: 20px;
+}
+.house-price h4 span{
+  font-size: 16px;
+  font-style: 500;
+}
+.sidebar{
+  border: 1px solid #151414;
+  padding: 20px 30px;
+  margin-top: 30px;
+}
+.sidebar h2{
+  font-weight: 500;
+  font-size: 24px;
+}
+.sidebar h3{
+  font-weight: 500;
+  font-size: 18px;
+  margin: 20px 0 10px;
+}
+.filter{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  color: #555;
+  margin-bottom: 10px;
+}
+.filter p{
+  flex: 1;
+  padding: 12px 0 0 0;
+}
+.filter input{
+  margin-right: 15px;
+  cursor: pointer;
+}
+/*------------small screen for listing page------*/
+@media only screen and (max-width: 700px){
+  .list-container{
+    margin-top: 150px;
+  }
+  .left-col, .right-col, .house-img, .house-info, .filter {
+    flex-basis: 100%
+  }
+  .left-col h1{
+    font-size: 22px;
+  }
+  .house-info h3{
+    font-size: 18px;
+  }
+  house-info i{
+    font-size: 16px;
+  }
+}
+/*-----house-details page------------------*/
+.house-details{
+  padding: 0 12%;
+}
+.house-title{
+  margin-top: 50px;
+}
+.house-title h1{
+  font-weight: 600;
+}
+.house-title .row{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin: 10px 0;
+}
+.house-title i{
+  color: #ff5361;
+  font-size: 14px;
+}
+.gallery{
+  display: grid;
+  grid-gap: 10px;
+  grid-template-areas: 'first first..' 'first first ..';
+  margin: 20px 0;
+}
+.gallery div img{
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+}
+.gallery-img-1{
+  grid-area: first;
+}
+.small-details h2{
+  font-weight: 500;
+}
+.small-details h4{
+  text-align: right;
+  font-size: 22px;
+}
+.line{
+  border: 0;
+  height: 1px;
+  background: #ccc;
+  width: 100%;
+  max-width: 800px;
+  margin: 20px 0 50px;
+}

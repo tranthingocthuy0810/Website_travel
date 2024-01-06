@@ -1,55 +1,66 @@
-<section class="header">
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
-  <%= image_tag('logo.png', alt: 'My Logo', class: 'logo', style: 'width: auto; height: 60px;') %>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNavDropdown">
-    <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-      <li class="nav-item"><%= link_to "Home", root_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Tour trong nuoc", edit_user_registration_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Tour nuoc ngoai", edit_user_registration_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Dich vu khac", edit_user_registration_path, class: "nav-link" %></li>
-      <li class="nav-item"><%= link_to "Contact", edit_user_registration_path, class: "nav-link" %></li>
-    </ul>
-    <div class="nav_right mt-2 mr-5">
-      <ul>
-          <li class="nr_li">
-          <i class="fa-solid fa-bell"></i>
-          </li>
-          <% if user_signed_in?  %>
-            <li class="nr_li dd_main">
-            <%= image_tag(current_user.avatar_thumbnail, class: "img") %>
-              
-              <div class="dd_menu">
-                <div class="dd_left">
-                    <ul>
-                      <li><i class="fas fa-map-marker-alt"></i></li>
-                      <li><i class="far fa-star"></i></li>
-                      <li><i class="far fa-plus-square"></i></li>
-                    </ul>
-                </div>
-                <div class="dd_right">
-                  <ul>
-                    <li><%= current_user.name %></li>
-                    <li><%= link_to "Settings", edit_user_registration_path %></li>
-                    <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
-                  </ul>
-                </div>
-              </div>
-            </li>
-            <% else %>
-              <button class="btn-login"><%= link_to "Log in", new_user_session_path %></li></button>
-            <% end %>
-        </ul>
-      </div>
-  </div>
-  </nav>
-<script>
-	var dd_main = document.querySelector(".dd_main");
-
-	dd_main.addEventListener("click", function(){
-		this.classList.toggle("active");
-	})
-</script>
+<section id="topbar" class="topbar d-flex align-items-center">
+   <div class="container d-flex justify-content-center justify-content-md-between">
+     <div class="contact-info d-flex align-items-center">
+       <i class="bi bi-envelope d-flex align-items-center"><a href="mailto:contact@example.com">contact@example.com</a></i>
+       <i class="bi bi-phone d-flex align-items-center ms-4"><span>+1 5589 55488 55</span></i>
+     </div>
+     <div class="social-links d-none d-md-flex align-items-center">
+       <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+       <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+       <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+       <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+     </div>
+   </div>
 </section>
+<header id="header" class="header d-flex align-items-center">
+
+
+   <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+     <a href="index.html" class="logo d-flex align-items-center">
+       <!-- Uncomment the line below if you also wish to use an image logo -->
+       <!-- <img src="assets/img/logo.png" alt=""> -->
+       <h1>Impact<span>.</span></h1>
+     </a>
+     <nav id="navbar" class="navbar">
+       <ul>
+         <li><%= link_to "Home", root_path%></li>
+         <% Category.all.each do |category| %>
+           <li class="dropdown"><%= link_to category.tourname, list_tour_path(category.id), class: "bi bi-chevron-down dropdown-indicator" %>
+             <ul>
+               <% category.list_tour.each do |list_tour| %>
+                 <li class="dropdown"><a href="#"><span><%= list_tour.name %></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                 <ul>
+                 <% list_tour.tour.each do |tour| %>
+                   <li><%=  link_to tour.title, static_page_path(tour.id) %></li>
+                 <% end %>
+                 </ul>
+               </li>
+               <% end %>
+             </ul>
+           </li>
+         <% end %>
+         <li><%= link_to "About", root_path%></li>
+         <li><%= link_to "Contact", root_path%></li>
+        
+        
+       </ul>
+       <% if user_signed_in? %>
+       <div class="dropdown mx-5"><%= image_tag(current_user.avatar_thumbnail, class: "bi bi-chevron-down dropdown-indicator img-user") %>
+           <ul>a
+             <li><a href="#"><%= current_user.name %></a></li>
+             <li><%= link_to "Profile" %></li>
+             <li><%= link_to "Settings", edit_user_registration_path %></li>
+             <li><%= link_to "Log out", destroy_user_session_path, method: :delete %></li>
+           </ul>
+       </div>
+       <% else %>
+         <%= link_to "Login", new_user_session_path, class: "btn-getstarted scrollto mx-5"%>
+       <% end %>
+     </nav><!-- .navbar -->
+    
+     <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
+     <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+   </div>
+ </header>
+ 
+<section id="home" class="welcome-hero">
