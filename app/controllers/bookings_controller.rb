@@ -44,4 +44,7 @@ class BookingsController < ApplicationController
       cancel_url: root_url,
     )
   end
+
+  def success
+  end
 end

@@ -1,25 +1,62 @@
+<div class ="container">
+<div class="house-details">
 <% if @tour %>
-  <%= @tour.title %> </br>
-  <%= @tour.description %> </br>
-  <span>Gia: </span><%= @tour.price %> </br>
-  <span>id: </span><%= @tour.id %> </br>
-  <span>sale count: </span><%= @tour.sales_count %> </br>
-  <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
-  <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
-<% else %>
-  <p>Tour not found.</p>
-<% end %>
-
-<h2>Product Recommendations</h2>
-<% @tour_recommendations.each do |tour| %>
-  <div class="recommendation">
-    <h3>Tour_id: <%= tour.id %></h3>
-    <h3><%= tour.title %></h3>
-    <p><%= tour.description %></p>
-    <p>Price: <%= tour.price %></p>
-    <%= image_tag(@tour.image, class: "image", style: "width: 200px; height: 200px;") if @tour.image.attached?%>
-    <%= link_to 'Read more', static_page_path(tour.id), class:"btn btn-sm btn-read px-3", style:"border-radius: 30px 0 0 30px;" %>
-    <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>    <!-- Add other attributes as needed -->
+<div class="house-title">
+  <h1><%= @tour.title %></h1>
+  <div class="row">
+    <div>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      <span>245 Reviews</span>
+    </div>
+    <div>
+      <p><%= @tour.description %></p>
+      <p><%= @tour.sales_count %></p>
+    </div>
   </div>
-<% end %>
+</div>
+<div class="gallery">
+  <div class="gallery-img-1"><%= image_tag(@tour.image) if @tour.image.attached? %></div>
+  <div><%= image_tag("house-2.png") %></div>
+  <div><%= image_tag("house-3.png") %></div>
+</div>
 
+<div class="small-details">
+  <h2>Entire rental unit hosted by Brandon</h2>
+  <h4>$ <%= @tour.price %> / person</h4>
+  <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+</div>
+<hr class="line">
+<% end %>
+</div>
+
+
+<div class="list-container">
+ <div class="left-col">
+    <p>10+ Option</p>
+    <h1>Recommended tours for you</h1>
+    <% @tour_recommendations.each do |tour| %>
+    <div class="house">
+      <div class="house-img">
+        <%= image_tag(tour.image, class: "image", style: "width: 350px; height: 200px;") if @tour.image.attached?%>
+      </div>
+      <div class="house-info">
+         <h3><%= tour.title %></h3>
+         <p><%= tour.description %></p>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i> </br>
+         <div class="house-price">
+           <h4> <%= tour.price %><span>/ person</span></h4>
+           <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+         </div>
+      </div>
+    </div>
+    <% end %>
+ </div>
+</div>

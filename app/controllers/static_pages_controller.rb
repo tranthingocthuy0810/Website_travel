@@ -1,5 +1,6 @@
 class StaticPagesController < ApplicationController
   # before_action :load_tour, only: %i(home)
+  before_action :load_tour_status, only: %i(home)
   def home
     @tours = policy_scope(Tour)
     @categories = Category.all
@@ -15,10 +16,20 @@ class StaticPagesController < ApplicationController
   def help
   end
 
-  def list_tour
-    @list_tour = ListTour.find(params[:id]) # or however you are retrieving the ListTour
-    @categories = Category.all
-    @tours = @list_tour.tour.all
+  def show_subcategories
+    @list_tour = ListTour.find(params[:list_tour_id])
+    @tours = @list_tour.tours
+  end
+  
+
+  def load_tour_status
+    @tours_all_hot = Tour.where(status: "hot").sort_by_created.page(params[:page]).per(9)
+    @tours_all_popular = Tour.where(status: "popular").sort_by_created.page(params[:page]).per(9)
+    @tours_all_trend = Tour.where(status: "trend").sort_by_created.page(params[:page]).per(9)
+    return if @tours_all_hot && @tours_all_popular && @tours_all_trend
+
+    flash[:danger] = t "flash.product_not_found"
+    redirect_to root_path
   end
 
   def show_recommendations(tour_id:)

@@ -57,7 +57,7 @@
                             <% end %>
                         </tbody>                   
                     </table>
-                    <%= paginate @tours, theme: 'twitter-bootstrap-3' %>
+                    <%= paginate @tours%>
                         <% if policy(Tour).create? %>
                             <button type="button" class="btn btn-outline-primary"><%= link_to 'New Tour', new_admin_tour_path %></button>                                
                         <% end %>

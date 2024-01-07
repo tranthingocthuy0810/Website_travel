@@ -25,12 +25,12 @@
        <ul>
          <li><%= link_to "Home", root_path%></li>
          <% Category.all.each do |category| %>
-           <li class="dropdown"><%= link_to category.tourname, list_tour_path(category.id), class: "bi bi-chevron-down dropdown-indicator" %>
+           <li class="dropdown"><%= link_to category.tourname, class: "bi bi-chevron-down dropdown-indicator" %>
              <ul>
                <% category.list_tour.each do |list_tour| %>
-                 <li class="dropdown"><a href="#"><span><%= list_tour.name %></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
+                 <li class="dropdown"><a href="#"><span><%= link_to list_tour.name, show_subcategories_static_page_path(list_tour) %></span> <i class="bi bi-chevron-down dropdown-indicator"></i></a>
                  <ul>
-                 <% list_tour.tour.each do |tour| %>
+                 <% list_tour.tours.each do |tour| %>
                    <li><%=  link_to tour.title, static_page_path(tour.id) %></li>
                  <% end %>
                  </ul>
@@ -41,7 +41,6 @@
          <% end %>
          <li><%= link_to "About", root_path%></li>
          <li><%= link_to "Contact", root_path%></li>
-        
         
        </ul>
        <% if user_signed_in? %>
@@ -63,4 +62,3 @@
    </div>
  </header>
  
-<section id="home" class="welcome-hero">

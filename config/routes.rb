@@ -20,10 +20,8 @@ Rails.application.routes.draw do
     resources :list_tours    
   end
 
-  resources :static_pages, only: %i(index show) do
-    collection do
-      get :show_recommendations
-    end
+  resources :static_pages do
+    get 'show_subcategories', on: :member
   end
   resources :bookings do
     resource :checkout, only: [:new, :create], controller: 'checkouts'
