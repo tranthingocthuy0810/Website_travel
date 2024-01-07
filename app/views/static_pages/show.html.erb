@@ -1,9 +1,62 @@
-<% if policy(Tour).show? %>
-  <%= @tour.title %> </br>
-  <%= @tour.description %> </br>
-  <span>Gia: </span><%= @tour.price %> </br>
-  <%= button_to "Checkout", checkouts_create_path, params: {id: @tour.id}, remote: true %> </br>
-  <%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
-<% else %>
-  <p>You are not authorized to view this product.</p>
+<div class ="container">
+<div class="house-details">
+<% if @tour %>
+<div class="house-title">
+  <h1><%= @tour.title %></h1>
+  <div class="row">
+    <div>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star"></i>
+      <i class="fas fa-star-half-alt"></i>
+      <span>245 Reviews</span>
+    </div>
+    <div>
+      <p><%= @tour.description %></p>
+      <p><%= @tour.sales_count %></p>
+    </div>
+  </div>
+</div>
+<div class="gallery">
+  <div class="gallery-img-1"><%= image_tag(@tour.image) if @tour.image.attached? %></div>
+  <div><%= image_tag("house-2.png") %></div>
+  <div><%= image_tag("house-3.png") %></div>
+</div>
+
+<div class="small-details">
+  <h2>Entire rental unit hosted by Brandon</h2>
+  <h4>$ <%= @tour.price %> / person</h4>
+  <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+</div>
+<hr class="line">
 <% end %>
+</div>
+
+
+<div class="list-container">
+ <div class="left-col">
+    <p>10+ Option</p>
+    <h1>Recommended tours for you</h1>
+    <% @tour_recommendations.each do |tour| %>
+    <div class="house">
+      <div class="house-img">
+        <%= image_tag(tour.image, class: "image", style: "width: 350px; height: 200px;") if @tour.image.attached?%>
+      </div>
+      <div class="house-info">
+         <h3><%= tour.title %></h3>
+         <p><%= tour.description %></p>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star"></i>
+         <i class="fas fa-star-half-alt"></i> </br>
+         <div class="house-price">
+           <h4> <%= tour.price %><span>/ person</span></h4>
+           <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+         </div>
+      </div>
+    </div>
+    <% end %>
+ </div>
+</div>

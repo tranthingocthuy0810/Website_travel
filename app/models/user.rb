@@ -7,6 +7,7 @@ class User < ApplicationRecord
   
   has_one_attached :avatar
   has_many :posts
+  has_many :bookings
   after_commit :add_default_avatar, on: %i[create update]
   enum role: {user: 0, admin: 1, manager: 2}
 

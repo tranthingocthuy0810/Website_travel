@@ -1,18 +1,35 @@
+
 <%= form_for([:admin, @tour]) do |form| %>
-  <div class="field">
-    <%= form.label :title %><br>
-    <%= form.text_field :title %>
+  <div class="form-group">
+    <%= form.label :Title %>
+    <%= form.text_field :title, class: 'form-control' %>
   </div>
-  <div class="field">
-    <%= form.label :description %><br>
-    <%= form.text_area :description %>
+  
+  <div class="form-group">
+    <%= form.label :Description %>
+    <%= form.text_area :description, class: 'form-control' %>
   </div>
+
   <%= render "image_preview", form: form, tour: @tour %>
-  <div class="field">
-    <%= form.label :status %>
-    <%= form.select :status, options_for_select(Tour.statuses.map { |key, value| [key.humanize, key] }), {prompt: "Select status of Tour..."}, class: "form-control" %>
+
+  <div class="form-group ">
+    <%= form.label :Price %>
+    <%= form.text_field :price, class: 'form-control' %>
   </div>
+
+  <div class="form-group">
+      <%= form.label :Status %>
+      <%= form.select :status, options_for_select(Tour.statuses.map { |key, value| [key.humanize, key] }), {prompt: "Select status of Tour..."}, class: "form-control" %>
+  </div>
+
+  <div class="form-group">
+    <%= form.label :list_tour_id %>
+    <%= form.select :list_tour_id, options_for_select(ListTour.all.map { |c| [c.name, c.id] }), { prompt: 'Select a listtour' }, class: 'form-control' %>
+  </div>
+
   <div class="actions">
-    <%= form.submit "#{action} Tour" %>
-  </div>
-<% end %>
+  <%= form.submit "#{action} Tour", class:"btn btn-primary" %>
+  <button type="button" class="btn btn-outline-primary"><%= link_to 'Back', admin_tours_path %></button>                                
+ </div>
+
+  <% end %>

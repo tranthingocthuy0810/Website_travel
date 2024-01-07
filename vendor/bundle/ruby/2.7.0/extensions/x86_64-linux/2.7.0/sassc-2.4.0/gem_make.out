@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-1vjbu02.rb extconf.rb
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-z6bkwu.rb extconf.rb
 creating Makefile
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
@@ -77,4 +77,4 @@ linking shared-object sassc/libsass.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/sassc-2.4.0/ext
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 libsass.so ./.gem.20231202-84237-17dw0hh/sassc
+/usr/bin/install -c -m 0755 libsass.so ./.gem.20231230-11372-m2idfx/sassc

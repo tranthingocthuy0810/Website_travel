@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/msgpack-1.7.2/ext/msgpack
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-wpvwrt.rb extconf.rb
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-1y4vrzt.rb extconf.rb
 checking for rb_enc_interned_str() in ruby.h... no
 checking for rb_hash_new_capa() in ruby.h... no
 checking for rb_proc_call_with_block() in ruby.h... yes
@@ -34,4 +34,4 @@ linking shared-object msgpack/msgpack.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/msgpack-1.7.2/ext/msgpack
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 msgpack.so ./.gem.20231202-84237-17ftyc8/msgpack
+/usr/bin/install -c -m 0755 msgpack.so ./.gem.20231230-11372-14iq50i/msgpack

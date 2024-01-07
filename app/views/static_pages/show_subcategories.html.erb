@@ -1,0 +1,9 @@
+<% if @list_tour %>
+  <h1>Tours for <%= @list_tour.name %></h1>
+
+  <% @tours.each do |tour| %>
+    <%= link_to tour.title, static_page_path(tour.id) %>
+  <% end %>
+<% else %>
+  <p>List Tour not found</p>
+<% end %>
