@@ -10,14 +10,8 @@ class Tour < ApplicationRecord
     scope :sort_by_created, -> { order(created_at: :desc) }
 
     after_create do
-        if price.present? && price > 0
-          tour = Stripe::Product.create(name: title)
-          price_obj = Stripe::Price.create(product: tour.id, unit_amount: self.price, currency: "usd")
-          update(stripe_price_id: price_obj.id)
-        else
-          # Handle the case where price is not present or not greater than 0
-          errors.add(:price, "must be present and greater than 0")
-          throw(:abort)
-        end
-      end
+        tour = Stripe::Product.create(name: title)
+        price = Stripe::Price.create(product: tour.id, unit_amount: self.price, currency: "usd")
+        update(stripe_tour_id: tour.id)
+    end
 end

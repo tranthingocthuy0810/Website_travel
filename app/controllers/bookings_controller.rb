@@ -47,12 +47,7 @@ class BookingsController < ApplicationController
       payment_method_types: ['card'],
       line_items: [{
         price_data: {
-          currency: 'usd',
-          product_data: {
-            name: @tour.title,
-            description: @tour.description,
-          },
-          unit_amount: total_amount,
+          price: tour.stripe_price_id,
         },
         quantity: 1,
       }],

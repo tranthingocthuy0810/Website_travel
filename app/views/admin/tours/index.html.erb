@@ -23,7 +23,7 @@
                                 <th>Image</th>
                                 <th>Status</th>
                                 <th>Sales count</th>
-                                <th>Stripe Price ID</th>
+                                <th>Stripe Tour ID</th>
                                 <th>ListTour</th>
                                 <th>Actions</th>
                             </tr>
@@ -36,7 +36,7 @@
                                 <th>Image</th>
                                 <th>Status</th>
                                 <th>Sales count</th>
-                                <th>Stripe Price ID</th>
+                                <th>Stripe Tour ID</th>
                                 <th>ListTour</th>
                                 <th>Actions</th>
                             </tr>
@@ -50,7 +50,7 @@
                                 <td><%= image_tag(tour.image, class: "image", style: "width: 200px; height: 200px;") if tour.image.attached?%></td>
                                 <td><%= tour.status.humanize %></td>
                                 <td><%= tour.sales_count %></td>
-                                <td><%= tour.stripe_price_id%></td>
+                                <td><%= tour.stripe_tour_id%></td>
                                 <td><%= tour.list_tour_id %></td>
                                 <td>
                                     <%= link_to 'Show', admin_tour_path(tour) %>
