@@ -45,7 +45,9 @@ Rails.application.configure do
   config.active_storage.service = :local
 
   config.action_mailer.perform_caching = false
-  config.hosts << "8da4-2405-4802-6057-fb00-594a-466f-ab3e-cd85.ngrok-free.app"
+  config.hosts << "8bdb-2405-4802-6057-fb00-d149-ddb1-ed4a-d363.ngrok-free.app"
+  config.web_console.whitelisted_ips = '127.0.0.1', '::1', '2405:4802:6057:fb00:d149:ddb1:ed4a:d363'
+
   
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
