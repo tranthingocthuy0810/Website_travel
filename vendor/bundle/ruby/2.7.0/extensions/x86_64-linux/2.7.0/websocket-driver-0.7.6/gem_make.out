@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-1qyekqd.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-n8n8mu.rb extconf.rb
 creating Makefile
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
@@ -12,4 +12,4 @@ linking shared-object websocket_mask.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.6/ext/websocket-driver
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20231230-11372-80uhx3
+/usr/bin/install -c -m 0755 websocket_mask.so ./.gem.20240108-3591-19f7gx0

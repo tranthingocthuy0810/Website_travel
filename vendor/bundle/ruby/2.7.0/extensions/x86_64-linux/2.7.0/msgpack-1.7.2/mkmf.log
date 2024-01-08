@@ -1,6 +1,6 @@
 have_func: checking for rb_enc_interned_str() in ruby.h... -------------------- no
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,7 +11,7 @@ checked program was:
 6: }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_enc_interned_str’ undeclared (first use in this function); did you mean ‘rb_sym_interned_p’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
@@ -38,8 +38,8 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/cc1Vdmyr.o: in function `t':
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+/usr/bin/ld: /tmp/ccm5JfIc.o: in function `t':
 /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/msgpack-1.7.2/ext/msgpack/conftest.c:17: undefined reference to `rb_enc_interned_str'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -67,7 +67,7 @@ checked program was:
 
 have_func: checking for rb_hash_new_capa() in ruby.h... -------------------- no
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_hash_new_capa’ undeclared (first use in this function); did you mean ‘rb_ary_new_capa’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_new_capa; return !p; }
@@ -94,8 +94,8 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_hash_new_capa; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccyqlPfJ.o: in function `t':
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+/usr/bin/ld: /tmp/ccX4GDxc.o: in function `t':
 /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/msgpack-1.7.2/ext/msgpack/conftest.c:17: undefined reference to `rb_hash_new_capa'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -123,7 +123,7 @@ checked program was:
 
 have_func: checking for rb_proc_call_with_block() in ruby.h... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -148,7 +148,7 @@ checked program was:
 
 block in append_cflags: checking for whether -fvisibility=hidden is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC  -fvisibility=hidden -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC  -fvisibility=hidden -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -163,7 +163,7 @@ checked program was:
 
 block in append_cflags: checking for whether -I.. is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden  -I.. -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden  -I.. -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -178,7 +178,7 @@ checked program was:
 
 block in append_cflags: checking for whether -Wall is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I..  -Wall -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I..  -Wall -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -193,7 +193,7 @@ checked program was:
 
 block in append_cflags: checking for whether -O3 is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall  -O3 -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall  -O3 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -208,7 +208,7 @@ checked program was:
 
 block in append_cflags: checking for whether -std=gnu99 is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3  -std=gnu99 -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3  -std=gnu99 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -223,7 +223,7 @@ checked program was:
 
 block in append_cflags: checking for whether -ggdb3 is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99  -ggdb3 -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99  -ggdb3 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -238,7 +238,7 @@ checked program was:
 
 block in append_cflags: checking for whether -DHASH_ASET_DEDUPE=1 is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3  -DHASH_ASET_DEDUPE=1 -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3  -DHASH_ASET_DEDUPE=1 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -253,7 +253,7 @@ checked program was:
 
 block in append_cflags: checking for whether -DSTR_UMINUS_DEDUPE_FROZEN=0 is accepted as CFLAGS... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3 -DHASH_ASET_DEDUPE=1  -DSTR_UMINUS_DEDUPE_FROZEN=0 -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC -fvisibility=hidden -I.. -Wall -O3 -std=gnu99 -ggdb3 -DHASH_ASET_DEDUPE=1  -DSTR_UMINUS_DEDUPE_FROZEN=0 -Werror -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"

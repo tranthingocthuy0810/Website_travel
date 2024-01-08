@@ -12,7 +12,7 @@ class BookingsController < ApplicationController
     @tour = Tour.find(booking_params[:tour_id])
     @booking = current_user.bookings.build(booking_params.merge(tour: @tour))
     @session = stripe_session
-  
+
     if @booking.valid?
       # Debug output
       puts "Booking is valid!"
@@ -20,8 +20,10 @@ class BookingsController < ApplicationController
       # Debug output
       puts "Booking is invalid!"
       puts "Errors: #{@booking.errors.full_messages}"
+      flash.now[:alert] = @booking.errors.full_messages.join(', ')
+      render 'new' and return
     end
-  
+
     if @booking.save
       flash[:notice] = 'Booking created successfully.'
       respond_to do |format|
@@ -29,6 +31,7 @@ class BookingsController < ApplicationController
       end
     else
       flash.now[:alert] = @booking.errors.full_messages.join(', ')
+      puts "Errors: #{@booking.errors.full_messages}" # Add this line for debugging
       render 'new'
     end
   end

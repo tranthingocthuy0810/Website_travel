@@ -1,12 +1,12 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.5/ext/mysql2
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-13clkvd.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-swz4bi.rb extconf.rb
 checking for rb_absint_size()... yes
 checking for rb_absint_singlebit_p()... yes
 checking for rb_gc_mark_movable()... yes
 checking for rb_wait_for_single_fd()... yes
 checking for rb_enc_interned_str() in ruby.h... no
 -----
-Using --with-openssl-dir=/home/thuytran/.rbenv/versions/2.7.4/openssl
+Using --with-openssl-dir=/home/thuytran/.asdf/installs/ruby/2.7.4/openssl
 -----
 -----
 Using mysql_config at /usr/bin/mysql_config
@@ -47,4 +47,4 @@ linking shared-object mysql2/mysql2.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.5/ext/mysql2
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 mysql2.so ./.gem.20231230-11372-2bzupc/mysql2
+/usr/bin/install -c -m 0755 mysql2.so ./.gem.20240108-3591-1c1k5tv/mysql2

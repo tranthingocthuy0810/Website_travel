@@ -37,9 +37,7 @@ Rails.application.configure do
 
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
-  config.hosts << "8bdb-2405-4802-6057-fb00-d149-ddb1-ed4a-d363.ngrok-free.app"
-  config.web_console.whitelisted_ips = '127.0.0.1', '::1', '2405:4802:6057:fb00:d149:ddb1:ed4a:d363'
-
+  config.hosts << "4ddb-2405-4802-6057-fb00-1a7b-f3fc-fa61-2e27.ngrok-free.app"
   # Mount Action Cable outside main process or domain.
   # config.action_cable.mount_path = nil
   # config.action_cable.url = 'wss://example.com/cable'

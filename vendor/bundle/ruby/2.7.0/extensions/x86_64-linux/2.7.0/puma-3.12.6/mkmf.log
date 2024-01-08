@@ -1,6 +1,6 @@
 have_library: checking for BIO_read() in -lcrypto... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,7 +11,7 @@ checked program was:
 6: }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -lcrypto  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -lcrypto  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘BIO_read’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
@@ -35,7 +35,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))BIO_read; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -lcrypto  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -lcrypto  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -59,7 +59,7 @@ checked program was:
 
 have_library: checking for SSL_CTX_new() in -lssl... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lcrypto  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -lssl -lcrypto  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lcrypto  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -lssl -lcrypto  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘SSL_CTX_new’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))SSL_CTX_new; return !p; }
@@ -83,7 +83,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))SSL_CTX_new; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lcrypto  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -lssl -lcrypto  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic    -lcrypto  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -lssl -lcrypto  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -107,7 +107,7 @@ checked program was:
 
 have_header: checking for openssl/bio.h... -------------------- yes
 
-"gcc -E -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC  conftest.c -o conftest.i"
+"gcc -E -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"

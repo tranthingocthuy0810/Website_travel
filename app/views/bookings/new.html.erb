@@ -1,28 +1,21 @@
 <h1>Tour: <%= @tour.id %></h1>
+<% if flash.now[:alert].present? %>
+  <div class="error">
+    <%= flash.now[:alert] %>
+  </div>
+<% end %>
 
 <%= form_with model: @booking do |form| %>
   <%= form.hidden_field :tour_id, value: @tour.id %>
 
   <%= form.label :start_date %>
   <%= form.date_field :start_date %>
-  <% if @booking.errors[:start_date].any? %>
-    <div class="error">
-      <%= @booking.errors[:start_date].join(', ') %>
-    </div>
-  <% end %>
 
   <%= form.label :end_date %>
   <%= form.date_field :end_date %>
-  <% if @booking.errors[:end_date].any? %>
-    <div class="error">
-      <%= @booking.errors[:end_date].join(', ') %>
-    </div>
-  <% end %>
 
   <%= form.label :number_person, 'Number of Persons:' %>
   <%= form.number_field :number_person, min: 1 %>
-
+  
   <%= form.submit 'Check out', remote: true %></br>
-
-  <%= debug @booking.errors %>
 <% end %>

@@ -8,4 +8,16 @@ class Tour < ApplicationRecord
     has_one_attached :image
     enum status: { popular: 'popular', hot: 'hot', trend: 'trend' }
     scope :sort_by_created, -> { order(created_at: :desc) }
+
+    after_create do
+        if price.present? && price > 0
+          tour = Stripe::Product.create(name: title)
+          price_obj = Stripe::Price.create(product: tour.id, unit_amount: self.price, currency: "usd")
+          update(stripe_price_id: price_obj.id)
+        else
+          # Handle the case where price is not present or not greater than 0
+          errors.add(:price, "must be present and greater than 0")
+          throw(:abort)
+        end
+      end
 end

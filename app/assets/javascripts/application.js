@@ -14,8 +14,10 @@
 //= require activestorage
 //= require turbolinks
 //= require gsap
+//= require jquery3
+//= require popper
+//= require bootstrap
 //= require_tree .
-
 /**
 * Template Name: Impact
 * Updated: Sep 18 2023 with Bootstrap v5.3.2

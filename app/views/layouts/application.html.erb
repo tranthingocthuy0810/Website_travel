@@ -12,6 +12,7 @@
     <%= javascript_include_tag 'jquery.min.js' %>
     <%= javascript_include_tag 'popper.min.js' %>
     <%= javascript_include_tag 'owl.carousel.min.js' %>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.11.2/font/bootstrap-icons.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -26,21 +27,14 @@
         <%= render "admin/home/header_admin" %>
       <% else %>
         <%= render "static_pages/header_client" %>
+        <% flash.each do |type, message| %>
+          <div class="alert alert-<%= type %>"><%= message %></div>
+        <% end %>
       <% end %>
-      <%= debug(params) if Rails.env.development? %>
     <% end %>
 
     <div>
       <%= yield %>
     </div>
-
-    <!-- Display error messages if any -->
-    <% if @booking.errors.any? %>
-      <div class="error">
-        <% @booking.errors.full_messages.each do |message| %>
-          <%= message %><br>
-        <% end %>
-      </div>
-    <% end %>
   </body>
 </html>

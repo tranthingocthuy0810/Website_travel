@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-ga64of.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-lhq29z.rb extconf.rb
 checking for BIO_read() in -lcrypto... yes
 checking for SSL_CTX_new() in -lssl... yes
 checking for openssl/bio.h... yes
@@ -17,16 +17,16 @@ mini_ssl.c: In function ‘engine_init_client’:
 mini_ssl.c:220:3: warning: ‘DTLSv1_method’ is deprecated [-Wdeprecated-declarations]
   220 |   conn->ctx = SSL_CTX_new(DTLSv1_method());
       |   ^~~~
-In file included from /home/thuytran/.rbenv/versions/2.7.4/openssl/include/openssl/e_os2.h:13,
-                 from /home/thuytran/.rbenv/versions/2.7.4/openssl/include/openssl/bio.h:13,
+In file included from /home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include/openssl/e_os2.h:13,
+                 from /home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include/openssl/bio.h:13,
                  from mini_ssl.c:14:
-/home/thuytran/.rbenv/versions/2.7.4/openssl/include/openssl/ssl.h:1905:45: note: declared here
+/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include/openssl/ssl.h:1905:45: note: declared here
  1905 | DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
       |                                             ^~~~~~~~~~~~~
-/home/thuytran/.rbenv/versions/2.7.4/openssl/include/openssl/opensslconf.h:115:37: note: in definition of macro ‘DECLARE_DEPRECATED’
+/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include/openssl/opensslconf.h:115:37: note: in definition of macro ‘DECLARE_DEPRECATED’
   115 | #   define DECLARE_DEPRECATED(f)    f __attribute__ ((deprecated));
       |                                     ^
-/home/thuytran/.rbenv/versions/2.7.4/openssl/include/openssl/ssl.h:1905:1: note: in expansion of macro ‘DEPRECATEDIN_1_1_0’
+/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include/openssl/ssl.h:1905:1: note: in expansion of macro ‘DEPRECATEDIN_1_1_0’
  1905 | DEPRECATEDIN_1_1_0(__owur const SSL_METHOD *DTLSv1_method(void)) /* DTLSv1.0 */
       | ^~~~~~~~~~~~~~~~~~
 compiling puma_http11.c
@@ -34,4 +34,4 @@ linking shared-object puma/puma_http11.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/ext/puma_http11
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20231230-11372-17dlx4l/puma
+/usr/bin/install -c -m 0755 puma_http11.so ./.gem.20240108-3591-1d93icy/puma

@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nio4r-2.6.0/ext/nio4r
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-1iyv26a.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-73fc8u.rb extconf.rb
 checking for unistd.h... yes
 checking for rb_io_descriptor()... no
 checking for linux/aio_abi.h... yes
@@ -47,4 +47,4 @@ linking shared-object nio4r_ext.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nio4r-2.6.0/ext/nio4r
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20231230-11372-1dzz90s
+/usr/bin/install -c -m 0755 nio4r_ext.so ./.gem.20240108-3591-65grc6

@@ -1,6 +1,6 @@
 have_func: checking for rb_category_warn()... -------------------- no
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,7 +11,7 @@ checked program was:
 6: }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘rb_category_warn’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_category_warn; return !p; }
@@ -35,8 +35,8 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_category_warn; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccUZgHdg.o: in function `t':
+"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+/usr/bin/ld: /tmp/ccoEq4b7.o: in function `t':
 /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/date-3.3.4/ext/date/conftest.c:15: undefined reference to `rb_category_warn'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -62,7 +62,7 @@ checked program was:
 
 have_var: checking for timezone in time.h with  -Werror... -------------------- yes
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC   -Werror -c conftest.c"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -87,7 +87,7 @@ checked program was:
 
 have_var: checking for altzone in time.h with  -Werror... -------------------- no
 
-"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -Werror -c conftest.c"
+"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC   -Werror -c conftest.c"
 conftest.c: In function ‘t’:
 conftest.c:16:55: error: ‘altzone’ undeclared (first use in this function)
    16 | int t(void) { const volatile void *volatile p; p = &(&altzone)[0]; return !p; }

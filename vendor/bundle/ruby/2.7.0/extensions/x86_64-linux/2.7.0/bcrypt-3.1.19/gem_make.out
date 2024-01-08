@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.19/ext/mri
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-37bnia.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-jcr3xj.rb extconf.rb
 creating Makefile
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.19/ext/mri
@@ -9,7 +9,7 @@ current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/b
 make "DESTDIR="
 compiling bcrypt_ext.c
 compiling crypt_blowfish.c
-gcc  -D__SKIP_GNU -I/home/thuytran/.rbenv/versions/2.7.4/include     -c -o x86.o x86.S
+gcc  -D__SKIP_GNU     -c -o x86.o x86.S
 compiling crypt_gensalt.c
 compiling wrapper.c
 wrapper.c:182:60: warning: ‘struct crypt_data’ declared inside parameter list will not be visible outside of this definition or declaration
@@ -19,4 +19,4 @@ linking shared-object bcrypt_ext.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/bcrypt-3.1.19/ext/mri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20231230-11372-woblbm
+/usr/bin/install -c -m 0755 bcrypt_ext.so ./.gem.20240108-3591-1c48g7t

@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0
+topdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0
 hdrdir = $(topdir)
-arch_hdrdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux
+arch_hdrdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/thuytran/.rbenv/versions/2.7.4
+prefix = $(DESTDIR)/home/thuytran/.asdf/installs/ruby/2.7.4
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20231230-11372-17dlx4l
-sitelibdir = $(DESTDIR)./.gem.20231230-11372-17dlx4l
+sitearchdir = $(DESTDIR)./.gem.20240108-3591-1d93icy
+sitelibdir = $(DESTDIR)./.gem.20240108-3591-1d93icy
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -87,10 +87,10 @@ CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_OPENSSL_BIO_H -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include  $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_OPENSSL_BIO_H -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include  $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
-ldflags  = -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic
-dldflags = -L/home/thuytran/.rbenv/versions/2.7.4/lib  -Wl,--compress-debug-sections=zlib 
+ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic
+dldflags = -Wl,--compress-debug-sections=zlib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -shared
@@ -125,8 +125,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /home/thuytran/.rbenv/versions/2.7.4/openssl/lib
-LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib
+libpath = . $(libdir) /home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib
+LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib
 DEFFILE = 
 
 CLEANFILES = mkmf.log

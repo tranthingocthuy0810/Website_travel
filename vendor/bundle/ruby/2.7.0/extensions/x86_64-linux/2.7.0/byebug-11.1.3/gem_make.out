@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231230-11372-q0oanh.rb extconf.rb
+/home/thuytran/.asdf/installs/ruby/2.7.4/bin/ruby -I /home/thuytran/.asdf/installs/ruby/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240108-3591-6syr4t.rb extconf.rb
 creating Makefile
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
@@ -16,4 +16,4 @@ linking shared-object byebug/byebug.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/byebug-11.1.3/ext/byebug
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 byebug.so ./.gem.20231230-11372-11qu1p1/byebug
+/usr/bin/install -c -m 0755 byebug.so ./.gem.20240108-3591-1i4tm6x/byebug

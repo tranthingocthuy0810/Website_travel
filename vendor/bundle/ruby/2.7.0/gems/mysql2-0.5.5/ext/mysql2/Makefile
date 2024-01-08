@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0
+topdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0
 hdrdir = $(topdir)
-arch_hdrdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux
+arch_hdrdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/thuytran/.rbenv/versions/2.7.4
+prefix = $(DESTDIR)/home/thuytran/.asdf/installs/ruby/2.7.4
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20231230-11372-2bzupc
-sitelibdir = $(DESTDIR)./.gem.20231230-11372-2bzupc
+sitearchdir = $(DESTDIR)./.gem.20240108-3591-1c1k5tv
+sitelibdir = $(DESTDIR)./.gem.20240108-3591-1c1k5tv
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -87,10 +87,10 @@ CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT -Wno-compound-token-split-by-macro -Wno-bad-function-cast -Wno-conditional-uninitialized -Wno-covered-switch-default -Wno-declaration-after-statement -Wno-disabled-macro-expansion -Wno-documentation-unknown-command -Wno-missing-field-initializers -Wno-missing-variable-declarations -Wno-padded -Wno-reserved-id-macro -Wno-sign-conversion -Wno-static-in-inline -Wno-switch-enum -Wno-undef -Wno-unreachable-code -Wno-used-but-marked-unused $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir) -I/usr/include/mysql
 DEFS     = 
-CPPFLAGS = -DHAVE_RB_ABSINT_SIZE -DHAVE_RB_ABSINT_SINGLEBIT_P -DHAVE_RB_GC_MARK_MOVABLE -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_CONST_SSL_MODE_DISABLED -DHAVE_CONST_SSL_MODE_PREFERRED -DHAVE_CONST_SSL_MODE_REQUIRED -DHAVE_CONST_SSL_MODE_VERIFY_CA -DHAVE_CONST_SSL_MODE_VERIFY_IDENTITY -DHAVE_MYSQL_NET_VIO -DHAVE_ST_NET_VIO -DHAVE_CONST_MYSQL_DEFAULT_AUTH -DHAVE_CONST_MYSQL_ENABLE_CLEARTEXT_PLUGIN -DHAVE_CONST_SERVER_QUERY_NO_GOOD_INDEX_USED -DHAVE_CONST_SERVER_QUERY_NO_INDEX_USED -DHAVE_CONST_SERVER_QUERY_WAS_SLOW -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_ON -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_OFF -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include  $(DEFS) $(cppflags)
+CPPFLAGS = -DHAVE_RB_ABSINT_SIZE -DHAVE_RB_ABSINT_SINGLEBIT_P -DHAVE_RB_GC_MARK_MOVABLE -DHAVE_RB_WAIT_FOR_SINGLE_FD -DHAVE_MYSQL_H -DHAVE_ERRMSG_H -DHAVE_CONST_SSL_MODE_DISABLED -DHAVE_CONST_SSL_MODE_PREFERRED -DHAVE_CONST_SSL_MODE_REQUIRED -DHAVE_CONST_SSL_MODE_VERIFY_CA -DHAVE_CONST_SSL_MODE_VERIFY_IDENTITY -DHAVE_MYSQL_NET_VIO -DHAVE_ST_NET_VIO -DHAVE_CONST_MYSQL_DEFAULT_AUTH -DHAVE_CONST_MYSQL_ENABLE_CLEARTEXT_PLUGIN -DHAVE_CONST_SERVER_QUERY_NO_GOOD_INDEX_USED -DHAVE_CONST_SERVER_QUERY_NO_INDEX_USED -DHAVE_CONST_SERVER_QUERY_WAS_SLOW -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_ON -DHAVE_CONST_MYSQL_OPTION_MULTI_STATEMENTS_OFF -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include  $(DEFS) $(cppflags)
 CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
-ldflags  = -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib
-dldflags = -L/home/thuytran/.rbenv/versions/2.7.4/lib  -Wl,--compress-debug-sections=zlib 
+ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib
+dldflags = -Wl,--compress-debug-sections=zlib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -shared
@@ -125,8 +125,8 @@ TOUCH = exit >
 #### End of system configuration section. ####
 
 preload = 
-libpath = . $(libdir) /home/thuytran/.rbenv/versions/2.7.4/openssl/lib /usr/lib/x86_64-linux-gnu
-LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu
+libpath = . $(libdir) /home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib /usr/lib/x86_64-linux-gnu
+LIBPATH =  -L. -L$(libdir) -Wl,-rpath,$(libdir) -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L/usr/lib/x86_64-linux-gnu -Wl,-rpath,/usr/lib/x86_64-linux-gnu
 DEFFILE = 
 
 CLEANFILES = mkmf.log

@@ -12,12 +12,12 @@ NULLCMD = :
 #### Start of system configuration section. ####
 
 srcdir = .
-topdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0
+topdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0
 hdrdir = $(topdir)
-arch_hdrdir = /home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux
+arch_hdrdir = /home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux
 PATH_SEPARATOR = :
 VPATH = $(srcdir):$(arch_hdrdir)/ruby:$(hdrdir)/ruby
-prefix = $(DESTDIR)/home/thuytran/.rbenv/versions/2.7.4
+prefix = $(DESTDIR)/home/thuytran/.asdf/installs/ruby/2.7.4
 rubysitearchprefix = $(rubylibprefix)/$(sitearch)
 rubyarchprefix = $(rubylibprefix)/$(arch)
 rubylibprefix = $(libdir)/$(RUBY_BASE_NAME)
@@ -31,8 +31,8 @@ rubyhdrdir = $(includedir)/$(RUBY_VERSION_NAME)
 vendorarchdir = $(vendorlibdir)/$(sitearch)
 vendorlibdir = $(vendordir)/$(ruby_version)
 vendordir = $(rubylibprefix)/vendor_ruby
-sitearchdir = $(DESTDIR)./.gem.20231230-11372-10o1478
-sitelibdir = $(DESTDIR)./.gem.20231230-11372-10o1478
+sitearchdir = $(DESTDIR)./.gem.20240108-3591-1fmseug
+sitelibdir = $(DESTDIR)./.gem.20240108-3591-1fmseug
 sitedir = $(rubylibprefix)/site_ruby
 rubyarchdir = $(rubylibdir)/$(arch)
 rubylibdir = $(rubylibprefix)/$(ruby_version)
@@ -87,10 +87,10 @@ CCDLFLAGS = -fPIC
 CFLAGS   = $(CCDLFLAGS) -g -O2 -fPIC -std=c99 -Wno-declaration-after-statement -O2 -g -Winline -Wmissing-noreturn -Wconversion -Wno-sign-conversion $(ARCH_FLAG)
 INCFLAGS = -I. -I$(arch_hdrdir) -I$(hdrdir)/ruby/backward -I$(hdrdir) -I$(srcdir)
 DEFS     = 
-CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_GUMBO_PARSE_WITH_OPTIONS -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -DHAVE_RB_GC_LOCATION -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxml2/2.11.6/include/libxml2 -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxslt/1.1.39/include -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxml2/2.11.6/include/libxml2 -I/home/thuytran/.rbenv/versions/2.7.4/include  $(DEFS) $(cppflags) -DNOKOGIRI_PACKAGED_LIBRARIES -DNOKOGIRI_LIBXML2_PATCHES="\"0001-Remove-script-macro-support.patch 0002-Update-entities-to-remove-handling-of-ssi.patch 0003-libxml2.la-is-in-top_builddir.patch 0009-allow-wildcard-namespaces.patch 0010-update-config.guess-and-config.sub-for-libxml2.patch 0011-rip-out-libxml2-s-libc_single_threaded-support.patch\"" -DNOKOGIRI_LIBXSLT_PATCHES="\"0001-update-config.guess-and-config.sub-for-libxslt.patch\"" -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ext/nokogiri/ports/x86_64-linux/libgumbo/1.0.0-nokogiri/include -DNOKOGIRI_OTHER_LIBRARY_VERSIONS="\"libgumbo:1.0.0-nokogiri\""
+CPPFLAGS = -DHAVE_XMLPARSEDOC -DHAVE_XSLTPARSESTYLESHEETDOC -DHAVE_EXSLTFUNCREGISTER -DHAVE_GUMBO_PARSE_WITH_OPTIONS -DHAVE_XMLHASFEATURE -DHAVE_XMLFIRSTELEMENTCHILD -DHAVE_XMLRELAXNGSETPARSERSTRUCTUREDERRORS -DHAVE_XMLRELAXNGSETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETVALIDSTRUCTUREDERRORS -DHAVE_XMLSCHEMASETPARSERSTRUCTUREDERRORS -DHAVE_RB_GC_LOCATION -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxml2/2.11.6/include/libxml2 -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxslt/1.1.39/include -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ports/x86_64-linux/libxml2/2.11.6/include/libxml2  $(DEFS) $(cppflags) -DNOKOGIRI_PACKAGED_LIBRARIES -DNOKOGIRI_LIBXML2_PATCHES="\"0001-Remove-script-macro-support.patch 0002-Update-entities-to-remove-handling-of-ssi.patch 0003-libxml2.la-is-in-top_builddir.patch 0009-allow-wildcard-namespaces.patch 0010-update-config.guess-and-config.sub-for-libxml2.patch 0011-rip-out-libxml2-s-libc_single_threaded-support.patch\"" -DNOKOGIRI_LIBXSLT_PATCHES="\"0001-update-config.guess-and-config.sub-for-libxslt.patch\"" -I/home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ext/nokogiri/ports/x86_64-linux/libgumbo/1.0.0-nokogiri/include -DNOKOGIRI_OTHER_LIBRARY_VERSIONS="\"libgumbo:1.0.0-nokogiri\""
 CXXFLAGS = $(CCDLFLAGS) -g -O2 $(ARCH_FLAG)
-ldflags  = -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic
-dldflags = -L/home/thuytran/.rbenv/versions/2.7.4/lib  -Wl,--compress-debug-sections=zlib 
+ldflags  = -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic
+dldflags = -Wl,--compress-debug-sections=zlib 
 ARCH_FLAG = 
 DLDFLAGS = $(ldflags) $(dldflags) $(ARCH_FLAG)
 LDSHARED = $(CC) -shared
