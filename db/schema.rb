@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2024_01_08_172206) do
+ActiveRecord::Schema.define(version: 2024_01_11_133119) do
 
   create_table "active_storage_attachments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
@@ -50,6 +50,17 @@ ActiveRecord::Schema.define(version: 2024_01_08_172206) do
     t.string "tourname"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "ckeditor_assets", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "data_file_name", null: false
+    t.string "data_content_type"
+    t.integer "data_file_size"
+    t.string "data_fingerprint"
+    t.string "type", limit: 30
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["type"], name: "index_ckeditor_assets_on_type"
   end
 
   create_table "comments", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -93,6 +104,13 @@ ActiveRecord::Schema.define(version: 2024_01_08_172206) do
     t.integer "quantity"
     t.string "image", limit: 500
     t.string "stripe_tour_id"
+    t.string "detail", limit: 5000
+    t.string "time"
+    t.string "transport"
+    t.string "day3", limit: 3000
+    t.string "day1", limit: 3000
+    t.string "day2", limit: 3000
+    t.string "trip"
     t.index ["list_tour_id"], name: "index_tours_on_list_tour_id"
   end
 

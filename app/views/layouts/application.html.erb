@@ -27,9 +27,6 @@
         <%= render "admin/home/header_admin" %>
       <% else %>
         <%= render "static_pages/header_client" %>
-        <% flash.each do |type, message| %>
-          <div class="alert alert-<%= type %>"><%= message %></div>
-        <% end %>
       <% end %>
     <% end %>
 

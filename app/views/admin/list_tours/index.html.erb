@@ -1,48 +1,59 @@
 
 <!-- Begin Page Content -->
-    <div class="container-fluid">
+<div class="container-fluid">
 
-        <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">List Tour</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-        For more information about DataTables, please visit the <a target="_blank"
-        href="https://datatables.net">official DataTables documentation</a>.</p>
-
-        <!-- DataTales Example -->
-        <div class="card shadow mb-4">
-            <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">List Tour du lich</h6>
-            </div>
-            <div class="card-body">
-                <div class="table-responsive">
-                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-                        <thead>
-                            <tr>
-                                <th>Name</th>
-                                <th>Category</th>
-                                <th>Actions</th>
-                            </tr>
-                        </thead>
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800">Danh sách danh mục các chuyến du lịch</h1>
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4">
+        <div class="card-header py-3">
+            <h6 class="m-0 font-weight-bold text-primary">Danh mục các chuyến du lịch</h6>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Tên</th>
+                            <th>Thuộc về danh mục</th>
+                            <th>Hành động</th>
+                        </tr>
+                    </thead>
                     <tbody>
-                      <% @list_tours.each do |list_tour| %>
+                        <% @list_tours.each do |list_tour| %>
                             <tr>
                                 <td><%= list_tour.name %></td>
                                 <td><%= list_tour.category_id %></td>
                                 <td>
-                                  <%= link_to 'Show', admin_list_tour_path(list_tour) %>
-                                  <%= link_to 'Edit', edit_admin_list_tour_path(list_tour) %>
-                                  <%= link_to 'Destroy', admin_list_tour_path(list_tour), method: :delete, data: { confirm: 'Are you sure?' } %>     
+                                    <%= link_to admin_list_tour_path(list_tour), class: "btn btn-info btn-circle btn-sm" do %>
+                                        <i class="fas fa-info-circle"></i>
+                                    <% end %>
+
+                                    <%= link_to edit_admin_list_tour_path(list_tour), class: "btn btn-warning btn-circle btn-sm" do %>
+                                        <i class="fas fa-edit"></i>
+                                    <% end %>
+
+                                    <%= link_to admin_list_tour_path(list_tour), method: :delete, data: { confirm: 'Bạn chắn chắn muốn xoá?' }, class: "btn btn-danger btn-circle btn-sm" do %>
+                                        <i class="fas fa-trash"></i>
+                                    <% end %>
                                 </td>
                             </tr>
-                            <% end %>
-                        </tbody>                   
-                    </table>
-                    <%= link_to 'New List Tour', new_admin_list_tour_path %>
-                </div>
+                        <% end %>
+                    </tbody>
+                </table>
+                <% if policy(ListTour).create? %>
+                <%= link_to 'Tạo mới', new_admin_list_tour_path, class: "btn btn-success btn-icon-split" %>
+                <% end %>
             </div>
         </div>
-
     </div>
+</div>
+<!-- /.container-fluid -->
+<!-- End of Main Content -->
+
+<!-- /.container-fluid -->
+<!-- End of Main Content -->
+
     <!-- /.container-fluid -->
     <!-- End of Main Content -->
 

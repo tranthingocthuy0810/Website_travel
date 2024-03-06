@@ -1,6 +1,6 @@
 have_func: checking for rb_absint_size()... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -11,7 +11,7 @@ checked program was:
 6: }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -34,7 +34,7 @@ checked program was:
 
 have_func: checking for rb_absint_singlebit_p()... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -57,7 +57,7 @@ checked program was:
 
 have_func: checking for rb_gc_mark_movable()... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -80,7 +80,7 @@ checked program was:
 
 have_func: checking for rb_wait_for_single_fd()... -------------------- yes
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:14:57: error: ‘rb_wait_for_single_fd’ undeclared (first use in this function)
    14 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
@@ -104,7 +104,7 @@ checked program was:
 14: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_wait_for_single_fd; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -128,7 +128,7 @@ checked program was:
 
 have_func: checking for rb_enc_interned_str() in ruby.h... -------------------- no
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
 conftest.c: In function ‘t’:
 conftest.c:16:57: error: ‘rb_enc_interned_str’ undeclared (first use in this function); did you mean ‘rb_sym_interned_p’?
    16 | int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
@@ -155,8 +155,8 @@ checked program was:
 16: int t(void) { void ((*volatile p)()); p = (void ((*)()))rb_enc_interned_str; return !p; }
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I.    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby  -lm   -lc"
-/usr/bin/ld: /tmp/ccqfzKOE.o: in function `t':
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic     -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby  -lm   -lc"
+/usr/bin/ld: /tmp/cc2LzEXb.o: in function `t':
 /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/mysql2-0.5.5/ext/mysql2/conftest.c:17: undefined reference to `rb_enc_interned_str'
 collect2: error: ld returned 1 exit status
 checked program was:
@@ -184,7 +184,7 @@ checked program was:
 
 have_header: checking for mysql.h... -------------------- yes
 
-"gcc -E -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC  conftest.c -o conftest.i"
+"gcc -E -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -196,7 +196,7 @@ checked program was:
 
 have_header: checking for errmsg.h... -------------------- yes
 
-"gcc -E -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC  conftest.c -o conftest.i"
+"gcc -E -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC  conftest.c -o conftest.i"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -208,7 +208,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_DISABLED in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -224,7 +224,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_PREFERRED in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -240,7 +240,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_REQUIRED in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -256,7 +256,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_CA in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -272,7 +272,7 @@ checked program was:
 
 have_const: checking for SSL_MODE_VERIFY_IDENTITY in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -288,7 +288,7 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.vio in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
  1: #include "ruby.h"
@@ -307,7 +307,7 @@ checked program was:
 
 have_struct_member: checking for MYSQL.net.pvio in mysql.h... -------------------- no
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 conftest.c:6:35: error: ‘NET’ has no member named ‘pvio’; did you mean ‘vio’?
     6 | int s = (char *)&((MYSQL*)0)->net.pvio - (char *)0;
       |                                   ^~~~
@@ -330,7 +330,7 @@ checked program was:
 
 have_const: checking for MYSQL_DEFAULT_AUTH in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -346,7 +346,7 @@ checked program was:
 
 have_const: checking for MYSQL_ENABLE_CLEARTEXT_PLUGIN in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -362,7 +362,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_GOOD_INDEX_USED in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -378,7 +378,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_NO_INDEX_USED in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -394,7 +394,7 @@ checked program was:
 
 have_const: checking for SERVER_QUERY_WAS_SLOW in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -410,7 +410,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_ON in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -426,7 +426,7 @@ checked program was:
 
 have_const: checking for MYSQL_OPTION_MULTI_STATEMENTS_OFF in mysql.h... -------------------- yes
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -442,7 +442,7 @@ checked program was:
 
 have_type: checking for my_bool in mysql.h... -------------------- no
 
-"gcc -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
+"gcc -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT   -c conftest.c"
 conftest.c:6:9: error: unknown type name ‘my_bool’
     6 | typedef my_bool conftest_type;
       |         ^~~~~~~
@@ -459,7 +459,7 @@ checked program was:
 
 --------------------
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Weverything -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Weverything -lm   -lc"
 gcc: error: unrecognized command-line option ‘-Weverything’
 checked program was:
 /* begin */
@@ -468,7 +468,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-compound-token-split-by-macro -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-compound-token-split-by-macro -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -476,7 +476,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-bad-function-cast -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-bad-function-cast -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -484,7 +484,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-conditional-uninitialized -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-conditional-uninitialized -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -492,7 +492,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-covered-switch-default -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-covered-switch-default -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -500,7 +500,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-declaration-after-statement -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-declaration-after-statement -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -508,7 +508,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-disabled-macro-expansion -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-disabled-macro-expansion -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -516,7 +516,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-documentation-unknown-command -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-documentation-unknown-command -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -524,7 +524,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-missing-field-initializers -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-missing-field-initializers -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -532,7 +532,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-missing-variable-declarations -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-missing-variable-declarations -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -540,7 +540,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-padded -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-padded -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -548,7 +548,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-reserved-id-macro -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-reserved-id-macro -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -556,7 +556,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-sign-conversion -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-sign-conversion -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -564,7 +564,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-static-in-inline -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-static-in-inline -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -572,7 +572,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-switch-enum -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-switch-enum -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -580,7 +580,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-undef -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-undef -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -588,7 +588,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-unreachable-code -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-unreachable-code -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"
@@ -596,7 +596,7 @@ checked program was:
 3: int main() {return 0;}
 /* end */
 
-"gcc -o conftest -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.asdf/installs/ruby/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib -L. -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.asdf/installs/ruby/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.asdf/installs/ruby/2.7.4/lib -L/home/thuytran/.asdf/installs/ruby/2.7.4/lib -lruby -Werror -Wno-used-but-marked-unused -lm   -lc"
+"gcc -o conftest -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/x86_64-linux -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0/ruby/backward -I/home/thuytran/.rbenv/versions/2.7.4/include/ruby-2.7.0 -I. -I/usr/include/mysql -I/home/thuytran/.rbenv/versions/2.7.4/openssl/include -I/home/thuytran/.rbenv/versions/2.7.4/include    -g -O2 -fPIC -DFULL_SSL_MODE_SUPPORT conftest.c  -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/openssl/lib -L. -L/home/thuytran/.rbenv/versions/2.7.4/lib  -fstack-protector-strong -rdynamic -Wl,-export-dynamic -L/home/thuytran/.rbenv/versions/2.7.4/openssl/lib    -L/usr/lib/x86_64-linux-gnu -lmysqlclient -lzstd -lssl -lcrypto -lresolv -lm  -Wl,-rpath,/home/thuytran/.rbenv/versions/2.7.4/lib -L/home/thuytran/.rbenv/versions/2.7.4/lib -lruby -Werror -Wno-used-but-marked-unused -lm   -lc"
 checked program was:
 /* begin */
 1: #include "ruby.h"

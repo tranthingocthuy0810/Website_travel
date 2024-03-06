@@ -10,26 +10,23 @@
       <i class="fas fa-star"></i>
       <i class="fas fa-star"></i>
       <i class="fas fa-star-half-alt"></i>
-      <span>245 Reviews</span>
+      <span>245 Đánh giá</span>
     </div>
     <div>
       <p><%= @tour.description %></p>
-      <p><%= @tour.sales_count %></p>
-      <p><%= @tour.stripe_price_id %></p>
-      <p>Person:</p>
+      <p>Số lượt đã đặt: <%= @tour.sales_count %></p>
     </div>
   </div>
 </div>
 <div class="gallery">
   <div class="gallery-img-1"><%= image_tag(@tour.image) if @tour.image.attached? %></div>
-  <div><%= image_tag("house-2.png") %></div>
-  <div><%= image_tag("house-3.png") %></div>
 </div>
 
 <div class="small-details">
-  <h2>Entire rental unit hosted by Brandon</h2>
-  <h4>$ <%= @tour.price %> / person</h4>
-  <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+  <h2>Chi tiết về chuyến đi</h2>
+  <p><%= raw @tour.detail %></p>
+  <h4>$ <%= @tour.price %> / Người</h4>
+  <%= link_to 'Đặt Ngay', new_booking_path(tour_id: @tour.id), class: "btn btn-primary", style: "border-radius: 30px;" %>
 </div>
 <hr class="line">
 <% end %>
@@ -38,8 +35,8 @@
 
 <div class="list-container">
  <div class="left-col">
-    <p>10+ Option</p>
-    <h1>Recommended tours for you</h1>
+    <p>10+ Gợi ý</p>
+    <h2>Một số chuyến đi bạn tham khảo</h2>
     <% @tour_recommendations.each do |tour| %>
     <div class="house">
       <div class="house-img">
@@ -54,8 +51,8 @@
          <i class="fas fa-star"></i>
          <i class="fas fa-star-half-alt"></i> </br>
          <div class="house-price">
-           <h4> <%= tour.price %><span>/ person</span></h4>
-           <%= link_to 'Book Now', new_booking_path(tour_id: @tour.id) %>
+           <h4> <%= tour.price %><span>/ Người</span></h4>
+           <%= link_to 'Chi tiết', static_page_path(tour.id), class:"btn btn-sm btn-read px-3", style:"border-radius: 30px 0 0 30px;" %>
          </div>
       </div>
     </div>

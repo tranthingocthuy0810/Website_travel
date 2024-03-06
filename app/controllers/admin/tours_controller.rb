@@ -3,7 +3,7 @@ class Admin::ToursController < ApplicationController
    # GET /posts or /posts.json
   def index
     @tours = policy_scope(Tour)
-    @tours = Tour.all.page(params[:page]).per(5)
+    @tours = Tour.all.paginate(page: params[:page], per_page: 9)
   end
  
  
@@ -85,7 +85,7 @@ class Admin::ToursController < ApplicationController
  
     # Only allow a list of trusted parameters through.
     def tour_params
-      params.require(:tour).permit(:title, :description, :status, :price, :list_tour_id, :image)
+      params.require(:tour).permit(:title, :description, :status, :price, :list_tour_id, :image, :detail, :quantity, :time, :transport, :day1, :day2, :day3, :trip)
     end
  end
  

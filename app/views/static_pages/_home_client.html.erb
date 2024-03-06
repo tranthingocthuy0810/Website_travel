@@ -1,24 +1,31 @@
+<style>
+  .tour-image {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+  }
+</style>
 <section id="home" class="welcome-hero">
 <div class="container">
   <div class="welcome-hero-txt">
-    <h2>best place to find and explore <br> that all you need </h2>
-    <p>Find Best Place, Restaurant, Hotel, Real State and many more think in just One click </p>
+    <h2>NƠI TỐT NHẤT ĐỂ TÌM KIẾM VÀ KHÁM PHÁ ĐÓ LÀ TẤT CẢ BẠN CẦN</h2>
+    <p>Tìm Địa điểm Tốt nhất, Nhà hàng, Khách sạn, Nhà nước Bất động sản và nhiều địa điểm khác chỉ bằng một cú nhấp chuột</p>
   </div>
   <div class="welcome-hero-serch-box">
         <div class="welcome-hero-form">
           <div class="single-welcome-hero-form">
-            <h3>what?</h3>
+            <h4>Cái gì?</h4>
             <form action="index.html">
-              <input type="text" placeholder="Ex: palce, resturent, food, automobile" />
+              <input type="text" placeholder="Ví dụ: Nhà hàng, địa điểm du lịch, đồ ăn, ...." />
             </form>
             <div class="welcome-hero-form-icon">
               <i class="flaticon-list-with-dots"></i>
             </div>
           </div>
           <div class="single-welcome-hero-form">
-            <h3>location</h3>
+            <h4>Vị Trí</h4>
             <form action="index.html">
-              <input type="text" placeholder="Ex: london, newyork, rome" />
+              <input type="text" placeholder="Nha Trang, Phú Yên, Hàn Quốc, ...." />
             </form>
             <div class="welcome-hero-form-icon">
               <i class="flaticon-gps-fixed-indicator"></i>
@@ -27,7 +34,7 @@
         </div>
         <div class="welcome-hero-serch">
           <button class="welcome-hero-btn" onclick="window.location.href='#'">
-             search  <i data-feather="search"></i>
+          Tìm kiếm  <i data-feather="search"></i>
           </button>
         </div>
       </div>
@@ -40,9 +47,9 @@
  <div class="container">
    <div class="text-center">
      <h6 class="section-title bg-white text-center text-warning px-3">
-       Destination
+     Những điểm đến được mọi người săn đón
      </h6>
-     <h1 class="mb-5">Popular Destination</h1>
+     <h1 class="mb-5">ĐIỂM ĐẾN PHỔ BIẾN</h1>
    </div>
 
 
@@ -51,7 +58,7 @@
        <div class="row g-3">
          <div class="col-lg-12 col-md-12">
            <a href="" class="d-block position-relative overflow-hidden">
-             <%= image_tag('nhatban.jpg', class:"img-fluid") %>
+             <%= image_tag('nhatban.jpg', class:"img-fluid ") %>
              <div class="bg-white text-danger fw-bold position-absolute top-0 start-0 m-3 py-1 px-2">50% OFF</div>
              <div class="bg-white text-warning fw-bold position-absolute bottom-0 end-0 m-3 py-1 px-2">Japan</div>
            </a>
@@ -93,8 +100,8 @@
  <div class="container" data-aos="fade-up">
  
   <div class="section-header">
-    <h2>Outstanding Tour</h2>
-    <p>Top famous tours <span></span>Today</p>
+    <h2>NHỮNG CHUYẾN ĐI PHỔ BIẾN</h2>
+    <p>Những chuyến đi nổi tiếng <span></span>ngày nay</p>
   </div>
  
   <div class="row gy-4">
@@ -102,7 +109,7 @@
     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
       <div class="chef-member">
         <div class="member-img">
-        <%= image_tag(tour.image, class: "img-fluid") if tour.image.attached?%>
+        <%= image_tag(tour.image, class: "img-fluid tour-image") if tour.image.attached?%>
           <div class="social">
             <a href=""><i class="bi bi-twitter"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>
@@ -131,8 +138,8 @@
  <div class="container" data-aos="fade-up">
  
   <div class="section-header">
-    <h2>Outstanding Tour</h2>
-    <p>Top famous tours <span></span>Today</p>
+    <h2>XU HƯỚNG DU LỊCH NĂM NAY</h2>
+    <p>Những chuyến đi có đang là xu hướng được săn đón</p>
   </div>
  
   <div class="row gy-4">
@@ -140,7 +147,7 @@
     <div class="col-lg-4 col-md-6 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
       <div class="chef-member">
         <div class="member-img">
-        <%= image_tag(tour.image, class: "img-fluid") if tour.image.attached?%>
+        <%= image_tag(tour.image, class: "img-fluid tour-image") if tour.image.attached?%>
           <div class="social">
             <a href=""><i class="bi bi-twitter"></i></a>
             <a href=""><i class="bi bi-facebook"></i></a>

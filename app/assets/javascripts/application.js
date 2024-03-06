@@ -13,8 +13,8 @@
 //= require rails-ujs
 //= require activestorage
 //= require turbolinks
-//= require gsap
 //= require jquery3
+//= require ckeditor-jquery
 //= require popper
 //= require bootstrap
 //= require_tree .
@@ -25,6 +25,7 @@
 * Author: BootstrapMade.com
 * License: https://bootstrapmade.com/license/
 */
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 

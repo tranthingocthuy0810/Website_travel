@@ -1,0 +1,21 @@
+vi:
+  activerecord:
+    attributes:
+      tour:
+        title: "Tiêu đề"
+        description: "Mô tả"
+        trip: "Chuyến đi"
+        price: "Giá"
+        status: "Trạng thái" 
+        detail: "Chi tiết"
+        quantity: "Số lượng"
+        time: "Thời gian"
+        transport: "Phương tiện vận chuyển"
+        list_tour_id: "Danh sách tour"
+  helpers:
+    submit:
+      create: "Tạo %{model}"
+      update: "Cập nhật %{model}"
+    views:
+      tours:
+        back: "Trở về"

@@ -16,12 +16,18 @@ class ListTourPolicy < ApplicationPolicy
  
     def create?
         # Allow admins and managers to create tours
-        user.admin? || user.manager?
+        user.admin?
     end
 
 
     def update?
         # Allow admins and managers to update tours
         user.admin? || user.manager?
+    end
+
+    class Scope < Scope
+        def resolve
+          scope.all
+        end
     end
  end

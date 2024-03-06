@@ -17,3 +17,5 @@ Rails.application.config.assets.precompile += %w( style.js )
 Rails.application.config.assets.precompile += %w( jquery.easing.min.js sb-admin-2.min.js bootstrap.bundle.min.js)
 Rails.application.config.assets.precompile += %w( sb-admin-2.css sb-admin-2.min.css)
 
+
+

@@ -1,44 +1,45 @@
 <!-- Begin Page Content -->
-    <div class="container-fluid">
+<div class="container-fluid">
 
         <!-- Page Heading -->
-        <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-        For more information about DataTables, please visit the <a target="_blank"
-        href="https://datatables.net">official DataTables documentation</a>.</p>
+        <h1 class="h3 mb-2 text-gray-800">Danh sách các chuyến du lịch</h1>
+        <p class="mb-4"> <a target="_blank"
+        href="https://datatables.net"></a>.</p>
 
         <!-- DataTales Example -->
         <div class="card shadow mb-4">
             <div class="card-header py-3">
-                <h6 class="m-0 font-weight-bold text-primary">Danh sach Tour du lich</h6>
+                <h6 class="m-0 font-weight-bold text-primary">Danh sách các chuyến du lịch</h6>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                         <thead>
                             <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Image</th>
-                                <th>Status</th>
-                                <th>Sales count</th>
-                                <th>Stripe Tour ID</th>
-                                <th>ListTour</th>
-                                <th>Actions</th>
+                                <th>Tiêu đề</th>
+                                <th>Mô tả</th>
+                                <th>Hành Trình</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th>Trạng thái</th>
+                                <th>Số lượng bán</th>
+                                <th>Thời gian</th>
+                                <th>Phương tiện di chuyển</th>
+                                <th style="width: 140px;">Hành động</th>
                             </tr>
                         </thead>
                     <tfoot>
                             <tr>
-                                <th>Title</th>
-                                <th>Description</th>
-                                <th>Price</th>
-                                <th>Image</th>
-                                <th>Status</th>
-                                <th>Sales count</th>
-                                <th>Stripe Tour ID</th>
-                                <th>ListTour</th>
-                                <th>Actions</th>
+                                <th>Tiêu đề</th>
+                                <th>Mô tả</th>
+                                <th>Hành Trình</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th>Trạng thái</th>
+                                <th>Số lượng bán</th>
+                                <th>Thời gian</th>
+                                <th>Phương tiện di chuyển</th>
+                                <th style="width: 140px;">Hành động</th>
                             </tr>
                     </tfoot>
                     <tbody>
@@ -46,26 +47,36 @@
                             <tr>
                                 <td><%= tour.title %></td>
                                 <td><%= tour.description %></td>
-                                <td><%= tour.price %></td>
+                                <td><%= tour.trip %></td>
+                                <td>$<%= tour.price %></td>
                                 <td><%= image_tag(tour.image, class: "image", style: "width: 200px; height: 200px;") if tour.image.attached?%></td>
                                 <td><%= tour.status.humanize %></td>
                                 <td><%= tour.sales_count %></td>
-                                <td><%= tour.stripe_tour_id%></td>
-                                <td><%= tour.list_tour_id %></td>
+                                <td><%= tour.time %></td>
+                                <td><%= tour.transport %></td>
                                 <td>
-                                    <%= link_to 'Show', admin_tour_path(tour) %>
-                                    <% if policy(Tour).update? %>
-                                        <%= link_to 'Edit tour', edit_admin_tour_path(tour) %>
+                                <%= link_to admin_tour_path(tour), class: "btn btn-info btn-circle btn-sm" do %>
+                                    <i class="fas fa-info-circle"></i>
+                                <% end %>
+                            
+                                <% if policy(Tour).update? %>
+                                    <%= link_to edit_admin_tour_path(tour), class: "btn btn-warning btn-circle btn-sm" do %>
+                                        <i class="fas fa-edit"></i>
                                     <% end %>
-                                    <%= link_to 'Destroy', admin_tour_path(tour), method: :delete, data: { confirm: 'Are you sure?' } %>                                
+                                <% end %>
+
+
+                                <%= link_to admin_tour_path(tour), method: :delete, data: { confirm: 'Bạn có chắn chắn muốn xoá?' }, class: "btn btn-danger btn-circle btn-sm" do %>
+                                    <i class="fas fa-trash"></i>
+                                <% end %>
                                 </td>
                             </tr>
                             <% end %>
                         </tbody>                   
                     </table>
-                    <%= paginate @tours%>
+                    <%= will_paginate @tours, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
                         <% if policy(Tour).create? %>
-                            <button type="button" class="btn btn-outline-primary"><%= link_to 'New Tour', new_admin_tour_path %></button>                                
+                            <button type="button" class="btn btn-outline-primary"><%= link_to 'Tạo mới', new_admin_tour_path %></button>                                
                         <% end %>
                 </div>
             </div>

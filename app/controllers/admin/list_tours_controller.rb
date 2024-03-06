@@ -3,24 +3,28 @@ class Admin::ListToursController < ApplicationController
 
   # GET /list_tours or /list_tours.json
   def index
-    @list_tours = ListTour.all
+    @list_tours = policy_scope(ListTour)
   end
 
   # GET /list_tours/1 or /list_tours/1.json
   def show
+    authorize @tour
   end
 
   # GET /list_tours/new
   def new
+    authorize @tour
     @list_tour = ListTour.new
   end
 
   # GET /list_tours/1/edit
   def edit
+    authorize @tour
   end
 
   # POST /list_tours or /list_tours.json
   def create
+    authorize @tour
     @list_tour = ListTour.new(list_tour_params)
 
     respond_to do |format|
@@ -36,6 +40,7 @@ class Admin::ListToursController < ApplicationController
 
   # PATCH/PUT /list_tours/1 or /list_tours/1.json
   def update
+    authorize @tour
     respond_to do |format|
       if @list_tour.update(list_tour_params)
         format.html { redirect_to admin_list_tour_url(@list_tour), notice: "List tour was successfully updated." }
@@ -50,7 +55,7 @@ class Admin::ListToursController < ApplicationController
   # DELETE /list_tours/1 or /list_tours/1.json
   def destroy
     @list_tour.destroy
-
+    authorize @tour
     respond_to do |format|
       format.html { redirect_to admin_list_tours_url, notice: "List tour was successfully destroyed." }
       format.json { head :no_content }

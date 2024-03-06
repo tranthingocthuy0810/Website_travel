@@ -16,14 +16,14 @@
         <li class="nav-item active">
                 <span class="nav-link">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <%= link_to "Dashboard", root_path, style:"font-size: 13px; color: white;" %></span>
+                    <%= link_to "Bảng điều khiển", root_path, style:"font-size: 13px; color: white;" %></span>
         </li>
             <!-- Divider -->
             <hr class="sidebar-divider">
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                Giao diện
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -31,12 +31,12 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Tours</span>
+                    <span>Quản lý chuyến du lịch</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <%= link_to "All Tours", admin_tours_path, class: "collapse-item" %>
-                        <%= link_to "Add Tours",  new_admin_tour_path, class: "collapse-item" %>
+                        <%= link_to "Xem tất cả", admin_tours_path, class: "collapse-item" %>
+                        <%= link_to "Thêm mới",  new_admin_tour_path, class: "collapse-item" %>
                     </div>
                 </div>
             </li>
@@ -46,13 +46,13 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>List Tours</span>
+                    <span>Quản lý danh mục</span>
                 </a>
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <%= link_to "All List Tours", admin_list_tours_path, class: "collapse-item" %>
-                        <%= link_to "Add List Tours", new_admin_list_tour_path, class: "collapse-item" %>
+                        <%= link_to "Xem tất cả ", admin_list_tours_path, class: "collapse-item" %>
+                        <%= link_to "Thêm mới", new_admin_list_tour_path, class: "collapse-item" %>
                     </div>
                 </div>
             </li>
@@ -62,7 +62,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                Khác
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -70,18 +70,16 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>Bài đăng</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <h6 class="collapse-header">Về chúng tôi</h6>
+                        <a class="collapse-item" href="login.html">Thông tin mới nhất</a>
+                        <a class="collapse-item" href="register.html">Chương trình giảm giá</a>                        </a>
+                        <a class="collapse-item" href="forgot-password.html">Hướng dẫn cấp mật khẩu</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">Thông tin khác</h6>
                     </div>
                 </div>
             </li>
@@ -90,17 +88,30 @@
             <li class="nav-item">
                     <span class="nav-link">
                     <i class="fas fa-user fa-sm fa-fw"></i>
-                    <%= link_to "Users", admin_users_path, style:"font-size: 13px; color: white;" %>
+                    <%= link_to "Quản lý đặt chuyến du lịch", admin_bookings_path, style:"font-size: 13px; color: white;" %>
                     </span>
             </li>
 
-            
+            <li class="nav-item">
+                <span class="nav-link">
+                <i class="fas fa-user fa-sm fa-fw"></i>
+                <%= link_to "Quản lý người dùng", admin_users_path, style:"font-size: 13px; color: white;" %>
+                </span>
+            </li>
+
+            <li class="nav-item">
+                <span class="nav-link">
+                <i class="fas fa-user fa-sm fa-fw"></i>
+                <%= link_to "Thêm người quản lý", admin_managers_path, style:"font-size: 13px; color: white;" %>
+                </span>
+             </li>
+
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>Dịch vụ của chúng tôi</span></a>
             </li>
 
             <!-- Divider -->
@@ -114,8 +125,6 @@
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
                 <img class="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="...">
-                <p class="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a class="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
             </div>
 
         </ul>
@@ -139,7 +148,7 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="Tìm kiếm ở đây..."
                                 aria-label="Search" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
@@ -306,20 +315,16 @@
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                 <%= link_to "Setting", admin_tours_path %><i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profiles
+                                    Thông tin cá nhân
                                 </a>
                                        
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
-                                </a>
-                                <a class="dropdown-item" href="#">
-                                    <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
+                                    Cài đặt
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 
-                                    <%= link_to "Log out", destroy_user_session_path, method: :delete %>
+                                    <%= link_to "Đăng xuất", destroy_user_session_path, method: :delete %>
                             </div>
                         </li>
 
@@ -329,3 +334,7 @@
 </div>
 <%= javascript_include_tag 'sb-admin-2.min.js' %>
 <%= javascript_include_tag 'bootstrap.bundle.min.js' %>
+<%= stylesheet_link_tag 'sb-admin-2' %>
+<%= stylesheet_link_tag 'sb-admin-2.min' %>
+<%= javascript_include_tag 'chart.min.js' %>
+<%= javascript_include_tag 'jquery.easing.min.js' %>

@@ -5,7 +5,6 @@ require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
-
 module TravelProject
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
@@ -13,6 +12,8 @@ module TravelProject
     config.action_mailer.default_url_options = { host: "http://localhost:3000" }
     config.middleware.use ActionDispatch::Cookies
     config.middleware.use ActionDispatch::Session::CookieStore  
+    config.i18n.default_locale = :vi
+    config.i18n.pluralize(:vi => [:one, :other]) 
 
     # Settings in config/environments/* take precedence over those specified here.
     # Application configuration can go into files in config/initializers

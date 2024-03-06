@@ -16,16 +16,16 @@ class StaticPagesController < ApplicationController
   def help
   end
 
-  def show_subcategories
-    @list_tour = ListTour.find(params[:list_tour_id])
-    @tours = @list_tour.tours
+  def show_tour
+    @tour = Tour.find_by(params[:id])
+    @list_tour = @tour.list_tour
+    @tours = filtered_tours.paginate(page: params[:page], per_page: 10)
   end
-  
 
   def load_tour_status
-    @tours_all_hot = Tour.where(status: "hot").sort_by_created.page(params[:page]).per(9)
-    @tours_all_popular = Tour.where(status: "popular").sort_by_created.page(params[:page]).per(9)
-    @tours_all_trend = Tour.where(status: "trend").sort_by_created.page(params[:page]).per(9)
+    @tours_all_hot = Tour.where(status: "hot").sort_by_created.limit(6)
+    @tours_all_popular = Tour.where(status: "popular").sort_by_created.limit(6)
+    @tours_all_trend = Tour.where(status: "trend").sort_by_created.limit(6)
     return if @tours_all_hot && @tours_all_popular && @tours_all_trend
 
     flash[:danger] = t "flash.product_not_found"
@@ -62,6 +62,19 @@ class StaticPagesController < ApplicationController
       puts "API Error: #{response.code} - #{response.body}" # Add this line for debugging
       @tour_recommendations = [] # Or display an error message
     end
+  end
+
+  private
+
+  def filtered_tours
+    tours = @list_tour.tours
+
+    if params[:search].present?
+      # Assuming 'title' is the attribute you want to search on
+      tours = tours.where('title ILIKE ?', "%#{params[:search]}%")
+    end
+
+    tours
   end
 end
 

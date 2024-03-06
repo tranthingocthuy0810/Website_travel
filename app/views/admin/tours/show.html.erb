@@ -1,59 +1,41 @@
-
 <div class="container-fluid">
   <!-- Page Heading -->
-    <h1 class="h3 mb-2 text-gray-800">Detail Tour</h1>
-    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank"
-    href="https://datatables.net">official DataTables documentation</a>.</p>
-    <p id="notice"><%= notice %></p>
-    <%= @tour.title %> </br>
-    <%= @tour.description %> </br>
-    <%= @tour.price %> </br>
-    <%= @tour.status.humanize %>
-    <td><%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>   
-    <% if policy(@tour).update? %>
-    <%= link_to 'Edit', edit_admin_tour_path(@tour) %>
-    <% end %>
-    <%= link_to 'Back', admin_tours_path %>
-    <%= link_to 'Destroy', admin_tour_path(@tour), method: :delete, data: { confirm: 'Are you sure?' } %>
-
-    
-</div>
-<!-- Footer -->
-<footer class="sticky-footer bg-white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright &copy; Your Website 2020</span>
+  <h1 class="h3 mb-2 text-gray-800">Chi tiết về chuyến du lịch</h1>
+  <p class="mb-4"><a target="_blank" href="https://datatables.net"></a>.</p>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Thông tin chuyến du lịch</h5>
         </div>
-    </div>
-</footer>
-<!-- End of Footer -->
-
-
-
-<!-- Scroll to Top Button-->
-<a class="scroll-to-top rounded" href="#page-top">
-    <i class="fas fa-angle-up"></i>
-</a>
-
-<!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">×</span>
-                </button>
-            </div>
-            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-            <div class="modal-footer">
-                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                <a class="btn btn-primary" href="login.html">Logout</a>
-            </div>
+        <div class="card-body">
+          <p class="card-text"><strong>Tiêu đề:</strong> <%= @tour.title %></p>
+          <p class="card-text"><strong>Mô tả:</strong> <%= @tour.description %></p>
+          <p class="card-text"><strong>Hành trình:</strong> <%= @tour.trip %></p>
+          <p class="card-text"><strong>Giá tiền:</strong> <%= @tour.price %></p>
+          <p class="card-text"><strong>Chi tiết:</strong> <%= raw @tour.detail %></p>
+          <p class="card-text"><strong>Thời gian:</strong> <%= @tour.time %></p>
+          <p class="card-text"><strong>Phương tiện:</strong> <%= @tour.transport %></p>
+          <p class="card-text"><strong>Trạng thái:</strong> <%= @tour.status.humanize %> </p>
+          <% if policy(@tour).update? %>
+            <%= link_to 'Chỉnh sửa', edit_admin_tour_path(@tour), class: 'btn btn-primary' %>
+          <% end %>
+          <%= link_to 'Trở về', admin_tours_path, class: 'btn btn-secondary' %>
+          <%= link_to 'Xoá', admin_tour_path(@tour), method: :delete, data: { confirm: 'Bạn chắc chắn muốn xoá?' }, class: 'btn btn-danger' %>   
         </div>
+      </div>
     </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Hình ảnh</h5>
+        </div>
+        <div class="card-body">
+          <%= image_tag(@tour.image, class: "img-fluid") if @tour.image.attached? %>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 <%= stylesheet_link_tag 'sb-admin-2' %>
 <%= stylesheet_link_tag 'sb-admin-2.min' %>

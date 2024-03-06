@@ -3,7 +3,8 @@ Rails.application.routes.draw do
   get "home", to: "static_pages#home", as: :home_client
   devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks", registrations: "users/registrations", :confirmations => "users/confirmations"}
   get '/help', to: 'static_pages#help'
-  get '/list_tour', to: 'static_pages#list_tour', as: 'list_tour'
+  get '/show_tour', to: 'static_pages#show_tour'
+  #get '/list_tour', to: 'static_pages#list_tour', as: 'list_tour'
   devise_scope :user do  
     get '/users/sign_out' => 'devise/sessions#destroy' 
     get '/users/sign_in' => 'devise/sessions#new' 
@@ -17,6 +18,8 @@ Rails.application.routes.draw do
     resource :users
     resources :tours, concerns: :paginatable
     resources :categories
+    resources :bookings, only: [:index]
+    resources :managers
     resources :list_tours    
   end
 
@@ -24,8 +27,7 @@ Rails.application.routes.draw do
     get 'show_subcategories', on: :member
   end
   resources :bookings do
-    resource :checkout, only: [:new, :create], controller: 'checkouts'
-    get 'success', on: :collection, to: 'bookings#success'
+    get 'success', on: :member
   end
   resource :webhooks, only: [:create]
 end
