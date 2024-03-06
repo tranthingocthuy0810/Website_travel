@@ -6,7 +6,14 @@ class User < ApplicationRecord
          :omniauthable, omniauth_providers: [:facebook, :google_oauth2]
   
   has_one_attached :avatar
+  validates :phone_number, presence: true, length: { is: 10 }, numericality: { only_integer: true }
+  validates :name, presence: true, length: { maximum: 50 }
+  VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
+    validates :email, presence: true, length: { maximum: 255 }, 
+                                      format: { with: VALID_EMAIL_REGEX },
+                                      uniqueness: true
   has_many :posts
+  has_many :bookings
   after_commit :add_default_avatar, on: %i[create update]
   enum role: {user: 0, admin: 1, manager: 2}
 

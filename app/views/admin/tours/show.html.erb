@@ -1,7 +1,43 @@
-<p id="notice"><%= notice %></p>
-<%= @tour.title %> </br>
-<%= @tour.description %> </br>
-<td><%= image_tag(@tour.image, class: "image") if @tour.image.attached?%> </td>
-<%= @tour.status.humanize %>
-<%= link_to 'Edit', edit_admin_tour_path(@tour) %>
-<%= link_to 'Back', admin_tours_path %>
+<div class="container-fluid">
+  <!-- Page Heading -->
+  <h1 class="h3 mb-2 text-gray-800">Chi tiết về chuyến du lịch</h1>
+  <p class="mb-4"><a target="_blank" href="https://datatables.net"></a>.</p>
+  <div class="row">
+    <div class="col-md-8">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Thông tin chuyến du lịch</h5>
+        </div>
+        <div class="card-body">
+          <p class="card-text"><strong>Tiêu đề:</strong> <%= @tour.title %></p>
+          <p class="card-text"><strong>Mô tả:</strong> <%= @tour.description %></p>
+          <p class="card-text"><strong>Hành trình:</strong> <%= @tour.trip %></p>
+          <p class="card-text"><strong>Giá tiền:</strong> <%= @tour.price %></p>
+          <p class="card-text"><strong>Chi tiết:</strong> <%= raw @tour.detail %></p>
+          <p class="card-text"><strong>Thời gian:</strong> <%= @tour.time %></p>
+          <p class="card-text"><strong>Phương tiện:</strong> <%= @tour.transport %></p>
+          <p class="card-text"><strong>Trạng thái:</strong> <%= @tour.status.humanize %> </p>
+          <% if policy(@tour).update? %>
+            <%= link_to 'Chỉnh sửa', edit_admin_tour_path(@tour), class: 'btn btn-primary' %>
+          <% end %>
+          <%= link_to 'Trở về', admin_tours_path, class: 'btn btn-secondary' %>
+          <%= link_to 'Xoá', admin_tour_path(@tour), method: :delete, data: { confirm: 'Bạn chắc chắn muốn xoá?' }, class: 'btn btn-danger' %>   
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="card-title">Hình ảnh</h5>
+        </div>
+        <div class="card-body">
+          <%= image_tag(@tour.image, class: "img-fluid") if @tour.image.attached? %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<%= stylesheet_link_tag 'sb-admin-2' %>
+<%= stylesheet_link_tag 'sb-admin-2.min' %>
+<%= javascript_include_tag 'chart.min.js' %>
+<%= javascript_include_tag 'jquery.easing.min.js' %>

@@ -19,13 +19,14 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-gem 'turbolinks', '~> 5'
+gem "turbolinks", "~> 5.2"
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
+gem 'stimulus-rails', '1.3.3'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
@@ -33,12 +34,12 @@ gem 'omniauth-google-oauth2'
 gem 'activerecord-session_store'
 gem 'omniauth-rails_csrf_protection'
 gem 'image_processing'
-gem 'stimulus-rails'
 gem 'importmap-rails'
-gem 'bootstrap', '~> 4.0.0'
+gem 'bootstrap', '~> 5.3.2'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
-gem "font-awesome-sass"
+gem 'font-awesome-sass'
+gem 'faker'
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
 
@@ -72,9 +73,14 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-
 gem "pundit", "~> 2.3"
-
-gem "stripe", "~> 9.1"
-
+gem "stripe"
 gem "webpacker", "~> 5.4"
+gem "ransack"
+gem "sassc-rails"
+gem "net-http"
+gem 'ckeditor_rails'
+gem "twitter-bootstrap-rails"
+gem "i18n"
+gem "will_paginate", "~> 3.3", ">= 3.3.1"
+gem "will_paginate-bootstrap4"

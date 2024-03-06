@@ -1,0 +1,80 @@
+<div class="container mt-4">
+  <div class="row">
+    <!-- Category List -->
+    <div class="col-md-3">
+      <div class="side-nav-categories">
+        <div class="title text-dark"><strong>Category</strong></div>
+        <ul id="category-tabs">
+          <% Category.all.each do |category| %>
+            <li><%= link_to category.tourname, class: "main-category text-dark" %>
+              <ul class="sub-category-tabs">
+                <% category.list_tours.each do |list_tour| %>
+                  <li><a href="javascript:void(0)" class="text-dark"><%= link_to list_tour.name %></a></li>
+                <% end %>
+              </ul>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Product List -->
+    <div class="col-md-9">
+      <h2 class="text-dark">Danh sách các chuyến du lịch</h2>
+      <div class="row" id="productList">
+        <% @list_tour.tours.each do |tour| %>
+          <div class="col-md-4 mb-4" data-category="Category 1">
+            <div class="card">
+              <%= link_to static_page_path(tour.id) do %>
+                <%= image_tag(tour.image, class: "card-img-top fixed-size-image") %>
+              <% end %>
+              <div class="card-body">
+                <h6 class="card-title"><%= link_to tour.title, static_page_path(tour.id), class: "text-dark" %></h6>
+                <p class="card-text text-dark">Giá tiền: <%= tour.price %></p>
+                <%= link_to "#", class: "btn btn-primary btn-custom", style: "border-radius: 5px; background-color: #0dabc7;" do %>
+                  View Details
+                <% end %>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      </div>
+      <%= will_paginate @tours, renderer: WillPaginate::ActionView::BootstrapLinkRenderer, class: "text-dark" %>
+    </div>
+  </div>
+</div>
+
+<style>
+  .fixed-size-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  /* Add some spacing between the pagination and the products */
+  #productList {
+    margin-top: 20px;
+  }
+
+  /* Style the pagination */
+  .pagination {
+    justify-content: center;
+  }
+
+  .page-item {
+    display: inline-block;
+    margin-right: 5px; /* Adjust as needed */
+  }
+
+  /* Add general text color */
+  .text-dark {
+    color: black;
+  }
+
+  /* Custom styling for the "View Details" button */
+  .btn-custom {
+    border-radius: 5px;
+    background-color: #0dabc7;
+    color: white; /* Set text color to white */
+  }
+</style>

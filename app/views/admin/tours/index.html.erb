@@ -1,37 +1,128 @@
+<!-- Begin Page Content -->
+<div class="container-fluid">
 
-<h1>Admin Posts</h1>
+        <!-- Page Heading -->
+        <h1 class="h3 mb-2 text-gray-800">Danh sách các chuyến du lịch</h1>
+        <p class="mb-4"> <a target="_blank"
+        href="https://datatables.net"></a>.</p>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Description</th>
-      <th>Price</th>
-      <th>Image</th>
-      <th>Status</th>
-      <th>Actions</th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @tours.each do |tour| %>
-      <tr>
-        <td><%= tour.title %></td>
-        <td><%= tour.description %></td>
-        <td><%= tour.price %></td>
-        <td><%= image_tag(tour.image, class: "image") if tour.image.attached?%> </td>
-        <td><%= tour.status.humanize %></td>
-        <td>
-          <%= link_to 'Show', admin_tour_path(tour) %>
-          <% if policy(@tours).update? %>
-            <%= link_to 'Edit tour', edit_admin_tour_path(tour) %>
-          <% end %>
-          <%= link_to 'Destroy', admin_tour_path(tour), method: :delete, data: { confirm: 'Are you sure?' } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-      <% if policy(Tour).create? %>
-        <%= link_to 'New tour', new_admin_tour_path %>
-      <% end %>
-    
+        <!-- DataTales Example -->
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <h6 class="m-0 font-weight-bold text-primary">Danh sách các chuyến du lịch</h6>
+            </div>
+            <div class="card-body">
+                <div class="table-responsive">
+                    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                        <thead>
+                            <tr>
+                                <th>Tiêu đề</th>
+                                <th>Mô tả</th>
+                                <th>Hành Trình</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th>Trạng thái</th>
+                                <th>Số lượng bán</th>
+                                <th>Thời gian</th>
+                                <th>Phương tiện di chuyển</th>
+                                <th style="width: 140px;">Hành động</th>
+                            </tr>
+                        </thead>
+                    <tfoot>
+                            <tr>
+                                <th>Tiêu đề</th>
+                                <th>Mô tả</th>
+                                <th>Hành Trình</th>
+                                <th>Giá</th>
+                                <th>Hình ảnh</th>
+                                <th>Trạng thái</th>
+                                <th>Số lượng bán</th>
+                                <th>Thời gian</th>
+                                <th>Phương tiện di chuyển</th>
+                                <th style="width: 140px;">Hành động</th>
+                            </tr>
+                    </tfoot>
+                    <tbody>
+                            <% @tours.each do |tour| %> 
+                            <tr>
+                                <td><%= tour.title %></td>
+                                <td><%= tour.description %></td>
+                                <td><%= tour.trip %></td>
+                                <td>$<%= tour.price %></td>
+                                <td><%= image_tag(tour.image, class: "image", style: "width: 200px; height: 200px;") if tour.image.attached?%></td>
+                                <td><%= tour.status.humanize %></td>
+                                <td><%= tour.sales_count %></td>
+                                <td><%= tour.time %></td>
+                                <td><%= tour.transport %></td>
+                                <td>
+                                <%= link_to admin_tour_path(tour), class: "btn btn-info btn-circle btn-sm" do %>
+                                    <i class="fas fa-info-circle"></i>
+                                <% end %>
+                            
+                                <% if policy(Tour).update? %>
+                                    <%= link_to edit_admin_tour_path(tour), class: "btn btn-warning btn-circle btn-sm" do %>
+                                        <i class="fas fa-edit"></i>
+                                    <% end %>
+                                <% end %>
+
+
+                                <%= link_to admin_tour_path(tour), method: :delete, data: { confirm: 'Bạn có chắn chắn muốn xoá?' }, class: "btn btn-danger btn-circle btn-sm" do %>
+                                    <i class="fas fa-trash"></i>
+                                <% end %>
+                                </td>
+                            </tr>
+                            <% end %>
+                        </tbody>                   
+                    </table>
+                    <%= will_paginate @tours, renderer: WillPaginate::ActionView::BootstrapLinkRenderer %>
+                        <% if policy(Tour).create? %>
+                            <button type="button" class="btn btn-outline-primary"><%= link_to 'Tạo mới', new_admin_tour_path %></button>                                
+                        <% end %>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+    <!-- End of Main Content -->
+
+    <!-- Footer -->
+    <footer class="sticky-footer bg-white">
+        <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+                <span>Copyright &copy; Your Website 2020</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
+
+
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <a class="btn btn-primary" href="login.html">Logout</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%= stylesheet_link_tag 'sb-admin-2' %>
+    <%= stylesheet_link_tag 'sb-admin-2.min' %>
+    <%= javascript_include_tag 'chart.min.js' %>
+    <%= javascript_include_tag 'jquery.easing.min.js' %>

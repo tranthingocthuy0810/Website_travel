@@ -10,18 +10,19 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-group">
+    <%= form.label :Name %>
+    <%= form.text_field :name, class: 'form-control' %>
   </div>
-
-  <div class="field">
-    <%= form.label :category_id %>
-    <%= form.text_field :category_id %>
+  
+  <div class="form-group">
+    <%= form.label :Category_id %>
+    <%= form.text_area :category_id, class: 'form-control' %>
   </div>
 
   <div class="actions">
-    <%= form.submit %>
-  </div>
-<% end %>
+  <%= form.submit "#{action} danh mục", class:"btn btn-primary" %>
+  <button type="button" class="btn btn-outline-primary"><%= link_to 'Trở về', admin_list_tours_path %></button>                                
+ </div>
+
+  <% end %>

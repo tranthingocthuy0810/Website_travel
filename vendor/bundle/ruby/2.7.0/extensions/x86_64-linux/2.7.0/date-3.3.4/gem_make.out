@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/date-3.3.4/ext/date
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-1rz35o6.rb extconf.rb
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240112-9246-1h7jt4.rb extconf.rb
 checking for rb_category_warn()... no
 checking for timezone in time.h with  -Werror... yes
 checking for altzone in time.h with  -Werror... no
@@ -18,4 +18,4 @@ linking shared-object date_core.so
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/date-3.3.4/ext/date
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 date_core.so ./.gem.20231202-84237-1f12rq6
+/usr/bin/install -c -m 0755 date_core.so ./.gem.20240112-9246-299bvt

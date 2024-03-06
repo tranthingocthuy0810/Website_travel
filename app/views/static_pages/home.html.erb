@@ -1,5 +1,8 @@
-<% if user_signed_in? && current_user.admin? %>
-    <%= render "static_pages/home_admin" %>
+<% if user_signed_in? && (current_user.admin? || current_user.manager?) %>
+    <%= render "admin/home/home_admin" %>
 <% else %>
     <%= render "static_pages/home_client" %>
+    <div class="container">
+    </div>
+    <%= render "static_pages/footer_client" %>
 <% end %>

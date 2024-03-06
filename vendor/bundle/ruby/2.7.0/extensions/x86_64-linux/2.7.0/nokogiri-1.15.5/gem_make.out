@@ -1,5 +1,5 @@
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ext/nokogiri
-/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20231202-84237-17tkyqt.rb extconf.rb
+/home/thuytran/.rbenv/versions/2.7.4/bin/ruby -I /home/thuytran/.rbenv/versions/2.7.4/lib/ruby/2.7.0 -r ./siteconf20240112-9246-1eftt4s.rb extconf.rb
 checking for whether -std=c99 is accepted as CFLAGS... yes
 checking for whether -Wno-declaration-after-statement is accepted as CFLAGS... yes
 checking for whether -O2 is accepted as CFLAGS... yes
@@ -140,5 +140,5 @@ rm -rf /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15
 
 current directory: /home/thuytran/Website_travel/vendor/bundle/ruby/2.7.0/gems/nokogiri-1.15.5/ext/nokogiri
 make "DESTDIR=" install
-/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20231202-84237-ddz7rp/nokogiri
+/usr/bin/install -c -m 0755 nokogiri.so ./.gem.20240112-9246-1o8in9r/nokogiri
 installing nokogiri libraries
